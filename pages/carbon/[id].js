@@ -14,7 +14,7 @@ const fetcher = async (url) => {
 export default function Carbon() {
   const { query } = useRouter();
   const { data, error } = useSWR(
-    () => query.year && `/api/carbon/${query.year}`,
+    () => query.id && `/api/carbon/${query.id}`,
     fetcher
   );
 

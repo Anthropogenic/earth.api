@@ -1,6 +1,6 @@
 import useSWR from "swr";
-import Carbon from "../components/carbon";
-import Person from "../components/Person";
+import Carbon from "../../components/carbon";
+import Person from "../../components/Person";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -10,5 +10,11 @@ export default function Index() {
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
 
-  return <>WIP Earth API</>;
+  return (
+    <ul>
+      {data.map((p, i) => (
+        <Carbon key={i} carbon={p} />
+      ))}
+    </ul>
+  );
 }
