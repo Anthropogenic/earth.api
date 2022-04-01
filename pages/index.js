@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import Carbon from "../components/carbon";
+import Yearly from "../components/Yearly";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -66,11 +66,6 @@ const products = [
   },
 ];
 export default function Index() {
-  const { data, error } = useSWR("/api/carbon", fetcher);
-
-  if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
-
   return (
     <>
       <div className="bg-white">Hero</div>
