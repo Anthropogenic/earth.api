@@ -1,10 +1,10 @@
 import useSWR from "swr";
-import Carbon from "../../components/carbon";
+import Yearly from "../../components/yearly";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/carbon", fetcher);
+  const { data, error } = useSWR("/api/co2", fetcher);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
@@ -51,7 +51,7 @@ export default function Index() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 bg-white">
-                    <Carbon key={data} carbon={data} />
+                    <Yearly key={data} data={data} />
                   </tbody>
                 </table>
               </div>

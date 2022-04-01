@@ -11,10 +11,10 @@ const fetcher = async (url) => {
   return data;
 };
 
-export default function Carbon() {
+export default function co2() {
   const { query } = useRouter();
   const { data, error } = useSWR(
-    () => query.id && `/api/carbon/${query.id}`,
+    () => query.id && `/api/co2/${query.id}`,
     fetcher
   );
 
@@ -22,17 +22,17 @@ export default function Carbon() {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <table>
+    <table className="text-center  mx-auto w-64">
       <thead>
         <tr>
-          <th>Year</th>
+          <th>Date</th>
           <th>Mean</th>
           <th>UNC</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{data.year}</td>
+          <td>{data.date}</td>
           <td>{data.mean}</td>
           <td>{data.unc}</td>
         </tr>

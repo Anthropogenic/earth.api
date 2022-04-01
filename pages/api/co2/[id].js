@@ -1,7 +1,7 @@
-import { carbon } from "../../../carbon";
+import { co2Yearly } from "../../../data/co2";
 
 export default function carbonHandler({ query: { id } }, res) {
-  const filtered = carbon.filter((c) => c.id === id);
+  const filtered = co2Yearly.filter((c) => c.id === id);
 
   // User with id exists
   if (filtered.length > 0) {
