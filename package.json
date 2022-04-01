@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "fathom-client": "^3.4.1",
     "next": "latest",
     "react": "^17.0.2",
