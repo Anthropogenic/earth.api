@@ -1,6 +1,6 @@
-# earth.api
+# earth.api + hge.earth
 
-If you are using a web3 compatible browser the domain is avaible at earth.api
+If you are using a web3 compatible browser the domain is available at [earth.api](https://earth.api) all other browsers can reach the data at [hge.earth](https://hge.earth)
 
 ## Current REST API Routes
 
