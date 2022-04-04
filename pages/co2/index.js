@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import Yearly from "../../components/yearly";
+import EmissionsYearly from "../../components/yearly";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -51,7 +51,7 @@ export default function Index() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 bg-white">
-                    <Yearly key={data} data={data} />
+                    <EmissionsYearly key={data} data={data} />
                   </tbody>
                 </table>
               </div>

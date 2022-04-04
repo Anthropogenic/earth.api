@@ -1,4 +1,4 @@
-import { carbon } from "../../../data/global-temperature";
+import { globalTemperatureYearly } from "../../../data/global-temperature";
 
 export default function carbonHandler({ query: { id } }, res) {
   const filtered = carbon.filter((c) => c.id === id);

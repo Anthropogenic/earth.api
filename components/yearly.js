@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Yearly({ data, source }) {
+export default function EmissionsYearly({ data, source }) {
   console.log(source);
   console.log(data);
 

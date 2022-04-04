@@ -1,6 +1,5 @@
 import Image from "next/image";
 import useSWR from "swr";
-import Yearly from "../components/Yearly";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
