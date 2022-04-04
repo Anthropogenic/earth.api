@@ -11,7 +11,7 @@ const fetcher = async (url) => {
   return data;
 };
 
-export default function co2() {
+export default function EmissionsCo2() {
   const { query } = useRouter();
   const { data, error } = useSWR(
     () => query.id && `/api/co2/${query.id}`,
@@ -22,7 +22,7 @@ export default function co2() {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <table className="text-center  mx-auto w-64">
+    <table className="text-center mx-auto w-64">
       <thead>
         <tr>
           <th>Date</th>

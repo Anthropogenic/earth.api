@@ -13,18 +13,27 @@ function App({ Component, pageProps }) {
     //  - This must be an exact match of your domain.
     //  - If you're using www. for your domain, make sure you include that here.
     Fathom.load("CYSAYGVG", {
-      includedDomains: ["hge.earth", "www.hge.earth"],
+      includedDomains: [
+        "hge.earth",
+        "www.hge.earth",
+        "earth.api",
+        "www.earth.api",
+      ],
     });
 
     function onRouteChangeComplete() {
       Fathom.trackPageview();
     }
     // Record a pageview when route changes
-    router.events.on("routeChangeComplete", onRouteChangeComplete);
+    {
+      /* router.events.on("routeChangeComplete", onRouteChangeComplete); */
+    }
 
     // Unassign event listener
     return () => {
-      router.events.off("routeChangeComplete", onRouteChangeComplete);
+      {
+        /* router.events.off("routeChangeComplete", onRouteChangeComplete); */
+      }
     };
   }, []);
 
