@@ -5,6 +5,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["IBM Plex Sans", "Helvetica Neue", "ui-sans-serif", "system-ui"],
+        serif: ["IBM Plex Serif", "ui-serif", "Georgia"],
+        mono: [
+          "IBM Plex Mono",
+          "Menlo",
+          "DejaVu Sans Mono",
+          "Bitstream Vera Sans Mono",
+          "ui-monospace",
+          "SFMono-Regular",
+        ],
+        LibreFranklin: ["Libre Franklin", "ui-sans-serif"],
+        PlayfairDisplay: ["Playfair Display", "ui-serif"],
+      },
       fontSize: {
         xs: ["10px", "18px"],
         sm: ["12px", "20px"],

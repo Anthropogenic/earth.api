@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { SITE_NAME } from "../lib/constants";
+
 import SiteLogo from "../public/EarthApiLogo.png";
 
 const NavigationLinks = [
@@ -37,13 +38,13 @@ export default function Navigation() {
                 </div>
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex-shrink-0 flex items-center">
-                    <div className="invisible sm:visible absolute w-[40px] -left-8">
+                    <div className="invisible sm:visible absolute w-[40px]">
                       <Image src={SiteLogo} alt="Earth API Logo" />
                     </div>
                     <div className=" sm:block sm:ml-6">
                       <div className="flex space-x-4">
                         <Link href="/">
-                          <a className="text-2xl sm:text-xl relative py-2 font-bold text-white">
+                          <a className="ml-8 text-2xl sm:text-xl relative py-2 font-bold text-white">
                             {SITE_NAME}
                           </a>
                         </Link>
