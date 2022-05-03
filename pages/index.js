@@ -44,8 +44,8 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="bg-[#17253D]">
-        <div className="3xl">Try it</div>
+      <div className="bg-[#17253D] text-white p-14">
+        <div className="text-3xl">Try it</div>
         <div className="grid grid-cols-3 gap-4">
           <div className="">
             To capture the greenhouse gases, we are starting data on ch4, co2,
@@ -56,18 +56,18 @@ export default function Index() {
             <br />
             See the{" "}
             <Link href="/docs">
-              <a>docs</a>
+              <a className="text-[#3695C4] hover:underline">docs</a>
             </Link>
             .
           </div>
-          <div className="col-2">
+          <div className="col-span-2">
             <CodeBlock />
           </div>
         </div>
       </div>
-      <div className="bg-[#17253D]">
-        <div className="text-3xl">Who is it for?</div>
-        <div className="">
+      <div className="bg-[#17253D] text-white p-14 ">
+        <div className="text-3xl pb-4">Who is it for?</div>
+        <div className="w-2/3 pb-8">
           Earth API is a public project open to looking for active contributors
           to expand our database of climate information (Link to contact us). We
           use open-source climate data, but make it available in a
@@ -132,6 +132,28 @@ export default function Index() {
               emissions.
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="bg-[#17253D] text-white p-14">
+        <div className="text-3xl">Get it touch.</div>
+
+        <div className="">
+          We want to make our API as accessible as possible. We are building a
+          data explorer so anyone, regardless of their coding experience, can
+          create charts and graphics they need. The Explorer is in a closed
+          Alpha for now, but you can sign up below to get early access.
+        </div>
+      </div>
+
+      <div className="bg-[#17253D] text-white p-14">
+        <div className="text-3xl">Built by Anthropogenic</div>
+
+        <div className="">
+          We want to make our API as accessible as possible. We are building
+          data explorer so anyone, regardless of their coding experience, can
+          create charts and graphics they need. The Explorer is in a closed
+          Alpha for now, but you can sign up below to get early access.
         </div>
       </div>
     </Layout>
