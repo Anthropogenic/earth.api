@@ -1,115 +1,139 @@
 import Image from "next/image";
+import Link from "next/link";
 import useSWR from "swr";
+import Layout from "../components/layout";
+import CodeBlock from "../components/codeblock";
+
+import StudentsHeroImage from "../public/students.png";
+import ResearchersHeroImage from "../public/researchers.png";
+import CreatorsHeroImage from "../public/creators.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-const products = [
-  {
-    id: 1,
-    name: "Carbon",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
-  },
-  {
-    id: 1,
-    name: "Carbon",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
-  },
-  {
-    id: 1,
-    name: "Carbon",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
-  },
-  {
-    id: 1,
-    name: "Carbon",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
-  },
-  {
-    id: 1,
-    name: "Carbon",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
-  },
-  {
-    id: 1,
-    name: "Carbon",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
-  },
-];
 export default function Index() {
   return (
-    <>
-      {/* <div className="bg-white">Hero</div>
-      <div className="bg-white">Search</div> */}
-      <div className="bg-white">
-        <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
-            Earth API Coming Soon
-          </h2>
+    <Layout>
+      <div className="relative sm:overflow-hidden bg-[#17253D]">
+        <div className=" absolute inset-x-0 bottom-0" />
 
-          <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {/* {products.map((product) => (
-              <div key={product.id} className="group relative">
-                <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                  <div className="w-full h-full object-center object-cover lg:w-full lg:h-full">
-                    <Image
-                      src={product.imageSrc}
-                      alt={product.imageAlt}
-                      width={500}
-                      height={500}
-                    />
-                  </div>
-                </div>
-                <div className="mt-4 flex justify-between">
-                  <div>
-                    <h3 className="text-sm text-gray-700">
-                      <a href={product.href}>
-                        <span aria-hidden="true" className="absolute inset-0" />
-                        {product.name}
-                      </a>
-                    </h3>
-                    <p className="mt-1 text-sm text-gray-500">
-                      {product.color}
-                    </p>
-                  </div>
-                  <p className="text-sm font-medium text-gray-900">
-                    {product.price}
-                  </p>
-                </div>
+        <div className="max-w-screen-xl max-h-fit mx-4 xl:mx-auto pt-14 font-PlayfairDisplay font-bold">
+          <div className="flex flex-wrap p-14">
+            <div className="w-full sm:w-2/3 z-10">
+              <div className="text-3xl md:text-6xl leading-tight font-PlayfairDisplay font-bold text-white">
+                Earth's digital twin.
               </div>
-            ))} */}
+              <div className="font-sans text-base font-2xl text-white py-9">
+                As a part of the web of life, Everything humans do affect the
+                ecosystems around us. And with many of the earth's life support
+                systems at tipping points/changing rapidly, there is a need for
+                greater accessibility and modernization of how we use climate
+                data and what we are building and researching.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="h-full w-full object-cover overflow-hidden z-20 ">
+          {/* <Image
+            src={WorldMap}
+            alt="Picture of the author"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+          /> */}
+        </div>
+      </div>
+
+      <div className="bg-[#17253D]">
+        <div className="3xl">Try it</div>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="">
+            To capture the greenhouse gases, we are starting data on ch4, co2,
+            n20, and sf6 sourced from the National Oceanic and Atmospheric
+            Administration, or NOAA (?). You can query the data at yearly and
+            monthly intervals. (select different emissions from the dropdown to
+            see example data sets). <br />
+            <br />
+            See the{" "}
+            <Link href="/docs">
+              <a>docs</a>
+            </Link>
+            .
+          </div>
+          <div className="col-2">
+            <CodeBlock />
           </div>
         </div>
       </div>
-    </>
+      <div className="bg-[#17253D]">
+        <div className="text-3xl">Who is it for?</div>
+        <div className="">
+          Earth API is a public project open to looking for active contributors
+          to expand our database of climate information (Link to contact us). We
+          use open-source climate data, but make it available in a
+          near-real-time API. If you have datasets you think we should add or
+          integrate, please reach out!
+        </div>
+
+        <div className="grid grid-cols-3 gap-4 bg-[#17253D]">
+          <div className="">
+            <div className="">
+              <Image
+                src={StudentsHeroImage}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="bg-black text-[#3695C4] p-1 uppercase font-semibold">
+              Students
+            </div>
+            <div className="text-white text-sm">
+              All API routes come with starting examples built to help anyone
+              get started in python or javascript. And soon, our data explorer
+              will allow you to make charts right from earth API.
+            </div>
+          </div>
+
+          <div className="">
+            <div className="">
+              <Image
+                src={ResearchersHeroImage}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="bg-black text-[#E14B6A] p-1 uppercase font-semibold">
+              Researchers
+            </div>
+            <div className="text-white text-sm">
+              The Earth API is a tool to easily call data from a variety of
+              publically available databases. For background, figure creation or
+              a quick double-check Earth API provides quick access.
+            </div>
+          </div>
+
+          <div className="">
+            <div className="">
+              <Image
+                src={CreatorsHeroImage}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="bg-black text-[#E14B6A] p-1 uppercase font-semibold">
+              Creators
+            </div>
+            <div className="text-white text-sm">
+              Our API is for the next generation of product creators who are
+              looking to help in the efforts to reduce human-generated
+              emissions.
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
   );
 }
