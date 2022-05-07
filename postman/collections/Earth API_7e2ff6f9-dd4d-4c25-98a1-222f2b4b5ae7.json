@@ -1,0 +1,597 @@
+{
+	"info": {
+		"_postman_id": "0e9b0ff8-f108-4fc0-8620-9a07f2c0e23c",
+		"name": "Earth API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "co2",
+			"item": [
+				{
+					"name": "co2 → Daily",
+					"id": "075a8f49-4edc-4acd-a5c4-00e5cb0a2a33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/co2/daily",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"co2",
+								"daily"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "co2 → Monthly",
+					"id": "7f92eb7c-dbe2-4628-b083-b12b3b0cc038",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/co2/monthly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"co2",
+								"monthly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "co2 → Yearly",
+					"id": "826a3d58-54ba-4179-80a4-3bf199def225",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/co2/yearly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"co2",
+								"yearly"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f79878ea-9084-4103-8c32-aa427dd0f485"
+		},
+		{
+			"name": "sf6",
+			"item": [
+				{
+					"name": "sf6 → Daily",
+					"id": "b64f245c-c880-421c-a520-33886c79106c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/sf6/daily",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"sf6",
+								"daily"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sf6 → Monthly",
+					"id": "48c12d82-0c24-4642-8a8b-afd3f06d74fa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/sf6/monthly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"sf6",
+								"monthly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sf6 → Yearly",
+					"id": "51a61780-8c15-4fb9-843e-bcf2e3e3d3f9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/sf6/yearly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"sf6",
+								"yearly"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "797281d6-ba74-4832-92cf-37908d97aa11"
+		},
+		{
+			"name": "ch4",
+			"item": [
+				{
+					"name": "ch4 → Daily",
+					"id": "34ef267e-5b44-4d19-bc02-682ba5521265",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/ch4/daily",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"ch4",
+								"daily"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ch4 → Monthly",
+					"id": "65e64083-83cb-4d5f-8a1e-bef8f3559bec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/ch4/monthly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"ch4",
+								"monthly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ch4 → Yearly",
+					"id": "a8d9429a-b3cc-4f06-8f44-68f504e26a0b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/ch4/yearly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"ch4",
+								"yearly"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "867bac58-e742-4941-8d05-ab7b118774a8"
+		},
+		{
+			"name": "n2o",
+			"item": [
+				{
+					"name": "n2o → Daily",
+					"id": "45c55761-8dd2-4819-883d-589db807b1e7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/n2o/daily",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"n2o",
+								"daily"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "n2o → Monthly",
+					"id": "c337385c-027c-466c-b3ba-1c883214d1e7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/n2o/monthly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"n2o",
+								"monthly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "n2o → Yearly",
+					"id": "560380e1-46d6-42c8-9500-a816cc031e2d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/n2o/yearly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"n2o",
+								"yearly"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "7cda90bc-34ae-4a21-bc05-b489d02b3853"
+		},
+		{
+			"name": "sea level",
+			"item": [
+				{
+					"name": "sea level → Daily",
+					"id": "6ef3d309-adaa-4e0f-ae5c-6271c513d97b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/sea-level/daily",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"sea-level",
+								"daily"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sea level → Monthly",
+					"id": "33cb734e-c3e2-416f-a29a-b3576cfdcec0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/sea-level/monthly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"sea-level",
+								"monthly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sea level → Yearly",
+					"id": "b9fa3266-a26b-4bdf-b4e9-cf19496f0a60",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/sea-level/yearly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"sea-level",
+								"yearly"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "b6f07bbf-9caa-40a1-a72c-35ae5b732b47"
+		},
+		{
+			"name": "ocean heat",
+			"item": [
+				{
+					"name": "ocean heat → Daily",
+					"id": "c7807203-0f03-41e7-883b-98b30a087a32",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/ocean-heat/daily",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"ocean-heat",
+								"daily"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ocean heat → Monthly",
+					"id": "ad49fc45-ce1e-4b8e-a018-7f81c06651ed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/ocean-heat/monthly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"ocean-heat",
+								"monthly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ocean heat → Yearly",
+					"id": "51781150-8f17-48b9-b6f3-3676b24078e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/ocean-heat/yearly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"ocean-heat",
+								"yearly"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f1875f60-0643-4e18-b922-9a17a3ef399a"
+		},
+		{
+			"name": "global temperature",
+			"item": [
+				{
+					"name": "global temperature → Daily",
+					"id": "32b4efda-7427-4b8b-85d2-8a241de23299",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/global-temperature/daily",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"global-temperature",
+								"daily"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "global temperature → Monthly",
+					"id": "cdf39d48-817c-418d-aad8-53ee6f053c4c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/global-temperature/monthly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"global-temperature",
+								"monthly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "global temperature → Yearly",
+					"id": "cef7f09e-91c9-47c4-929d-c088f2395799",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.anthropogenic.com/api/global-temperature/yearly",
+							"protocol": "https",
+							"host": [
+								"api",
+								"anthropogenic",
+								"com"
+							],
+							"path": [
+								"api",
+								"global-temperature",
+								"yearly"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "8f7a3c0d-bdfc-4112-af4b-7b43045f7efc"
+		}
+	]
+}
