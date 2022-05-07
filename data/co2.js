@@ -1,16 +1,14 @@
-export const co2Yearly = [
+export const co2Source = [
   {
-    source: [
-      {
-        name: "National Oceanic and Atmospheric Administration",
-        site: "https://gml.noaa.gov/ccgg/trends/global.html",
-        ftp: "ftp://aftp.cmdl.noaa.gov/products/trends/co2/",
-        api: "https://hge.earth/api/co2/yearly",
-      },
-    ],
+    name: "National Oceanic and Atmospheric Administration",
+    site: "https://gml.noaa.gov/ccgg/trends/global.html",
+    ftp: "ftp://aftp.cmdl.noaa.gov/products/trends/co2/",
+    api: "https://hge.earth/api/co2/",
   },
-  {
-    data: [
+];
+
+export const co2Yearly = [
+
       {
         id: "1980",
         date: "1980",
@@ -263,8 +261,6 @@ export const co2Yearly = [
         mean: "414.73",
         unc: "0.1",
       },
-    ],
-  },
 ];
 
 export const co2Monthly = [
