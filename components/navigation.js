@@ -10,7 +10,7 @@ import SiteLogo from "../public/EarthApiLogo.png";
 const NavigationLinks = [
   { title: "try", href: "/try" },
   { title: "data", href: "/data" },
-  { title: "contribute", href: "/contribute" },
+  { title: "contribute", href: "https://github.com/Anthropogenic/earth.api" },
 ];
 
 function classNames(...classes) {
@@ -45,7 +45,7 @@ export default function Navigation() {
                       <div className="flex space-x-4">
                         <Link href="/">
                           <a className="ml-8 text-2xl sm:text-xl relative py-2 font-bold text-white">
-                            {SITE_NAME}
+                            earth<span className="text-[#8ADCFE]">.</span>api
                           </a>
                         </Link>
                       </div>
@@ -57,7 +57,7 @@ export default function Navigation() {
                     <div className="flex space-x-4">
                       {NavigationLinks.map((item, index) => (
                         <Link href={item.href} key={index}>
-                          <a className=" px-3 py-2 rounded-md text-sm font-medium font-sans text-base text-white">
+                          <a className=" px-3 py-2 rounded-md text-sm font-medium font-sans text-base text-white uppercase">
                             {item.title}
                           </a>
                         </Link>
@@ -72,9 +72,9 @@ export default function Navigation() {
               <div className="px-2 pt-2 pb-3 space-y-1 bg-[#17253D]">
                 {NavigationLinks.map((item, index) => (
                   <Disclosure.Button
-                    key={item.name}
+                    key={index}
                     href={item.href}
-                    className="block px-3 py-2 font-sans text-base text-white"
+                    className="block px-3 py-2 font-sans text-base text-white uppercase"
                   >
                     <Link href={item.href} key={index}>
                       <a className="font-sans text-base hover:text-white">

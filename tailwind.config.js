@@ -38,3 +38,5 @@ module.exports = {
     require("@tailwindcss/typography"),
   ],
 };
+
+// co2 FFC784

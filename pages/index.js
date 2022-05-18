@@ -10,35 +10,36 @@ import HeroMap from "../public/hero-dot-globe@2x.png";
 import StudentsHeroImage from "../public/students.png";
 import ResearchersHeroImage from "../public/researchers.png";
 import CreatorsHeroImage from "../public/creators.png";
+import SearchIcon from "../public/icons/search-icon.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const ApiData = [
   {
-    name: "ch4",
+    name: "co2",
     description: "words",
-    href: "/ch4",
+    href: "/co2",
     heroImage: "",
     ClassName: "",
   },
   {
-    name: "c02",
-    description: "words",
-    href: "/c02",
-    heroImage: "",
-    ClassName: "",
-  },
-  {
-    name: "n20",
-    description: "words",
-    href: "n20",
+    name: "n2o",
+    description: "Nitrous Oxide",
+    href: "/n2o",
     heroImage: "",
     ClassName: "",
   },
   {
     name: "sf6",
-    description: "words",
-    href: "sf6",
+    description: "Sulfur Hexafluoride",
+    href: "/sf6",
+    heroImage: "",
+    ClassName: "",
+  },
+  {
+    name: "Sea Levels",
+    description: "Water",
+    href: "/sea-levels",
     heroImage: "",
     ClassName: "",
   },
@@ -197,17 +198,25 @@ export default function Index() {
       </div>
 
       <div className="bg-[#17253D] text-white p-14">
-        <div className="flex">
-          <div className="">tabs</div>
-          <div className="">
-            <input
-              aria-label="Search"
-              type="text"
-              onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search"
-              className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:border-gray-900 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:text-gray-100"
-            />
-            <button>Search</button>
+        <div className="flex flex-row">
+          <div className="flex-1">tabs</div>
+          <div className="flex-1">
+            <div className="flex ml-4 my-4 p-[6px] bg-[#111826] rounded-md">
+              <div className="">
+                <Image src={SearchIcon} alt="Search Icon" />
+              </div>
+
+              <input
+                aria-label="Search"
+                type="text"
+                onChange={(e) => setSearchValue(e.target.value)}
+                placeholder=""
+                className="mx-4 block w-full  text-gray-900 bg-white border  rounded-md  dark:text-gray-100"
+              />
+              <button className="bg-[#2d82b8] text-white rounded-md px-[5px] py-[5px]">
+                Search
+              </button>
+            </div>
           </div>
         </div>
         <hr />
@@ -304,7 +313,7 @@ export default function Index() {
             <button
               className="items-end mt-4 p-2 right-0 text-white border-white border-2 hover:text-[#202020] hover:bg-white"
               type="submit"
-              onClick="window.fathom.trackGoal('30DRUBWV', 0)"
+              onClick=""
             >
               Submit →
             </button>
