@@ -8,10 +8,10 @@ const FooterLinks = [
   {
     title: "Data Sources",
     links: [
-      { name: "co2 Data", href: "/", fathomEventCode: "" },
-      { name: "n20 Data", href: "/", fathomEventCode: "" },
-      { name: "sf6 Data", href: "/", fathomEventCode: "" },
-      { name: "Sea Level Rise", href: "/", fathomEventCode: "" },
+      { name: "co2 Data", href: "https://github.com/Anthropogenic/earth.api/tree/main/data", fathomEventCode: "" },
+      { name: "n20 Data", href: "https://github.com/Anthropogenic/earth.api/tree/main/data", fathomEventCode: "" },
+      { name: "sf6 Data", href: "https://github.com/Anthropogenic/earth.api/tree/main/data", fathomEventCode: "" },
+      { name: "Sea Level Rise", href: "https://github.com/Anthropogenic/earth.api/tree/main/data", fathomEventCode: "" },
     ],
   },
   {
@@ -46,7 +46,7 @@ export default function Footer({ preview, children }) {
   return (
     <>
       <div className="flex bg-[#17253D] text-white">
-        <div classname="flex-1 ">
+        <div className="flex-1 ">
           <div className="p-14">
             <div className="py-2">
               <Image
@@ -75,7 +75,7 @@ export default function Footer({ preview, children }) {
             </div>
           </div>
         </div>
-        <div classname="flex-none">
+        <div className="flex-none">
           <div className="flex">
             {FooterLinks.map((section, index) => (
               <div className="flex-1 border-l-2 pl-4" key={`footer-${index}`}>

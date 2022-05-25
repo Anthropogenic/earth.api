@@ -104,7 +104,7 @@ export default function Index() {
         </span> */}
       </div>
       <div className="bg-[#17253D] text-white p-14">
-        <div className="text-3xl ">Try it</div>
+        <div className="text-3xl font-extrabold">Try it</div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="">
             To capture the greenhouse gases, we are starting data on ch4, co2,
@@ -125,7 +125,7 @@ export default function Index() {
         </div>
       </div>
       <div className="bg-[#17253D] text-white p-14 ">
-        <div className="text-3xl pb-4">Who is it for?</div>
+        <div className="text-3xl pb-4 font-extrabold">Who is it for?</div>
         <div
           className="w-full 
         sm:w-2/3 pb-8"
@@ -262,9 +262,11 @@ export default function Index() {
           ))}
         </div> */}
       </div>
+
       <div className="bg-[#17253D] text-white flex p-14">
+        <div className="border-t-2"></div>
         <div className="w-full w-1/3">
-          <div className="text-3xl border-t-2">Get it touch.</div>
+          <div className="text-3xl font-extrabold">Get it touch.</div>
 
           <div className="">
             We want to make our API as accessible as possible. We are building a
@@ -321,8 +323,9 @@ export default function Index() {
         </div>
       </div>
       <div className="bg-[#17253D] text-white p-14">
+        <div className="border-t-2"></div>
         <div className="w-full w-1/3">
-          <div className="text-3xl border-t-2">Built by Anthropogenic</div>
+          <div className="text-3xl font-extrabold">Built by Anthropogenic</div>
 
           <div className="">
             We want to make our API as accessible as possible. We are building
