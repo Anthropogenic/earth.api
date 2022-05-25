@@ -74,6 +74,7 @@ export default function CodeBlock() {
             <button
               onClick={() => {
                 navigator.clipboard.writeText(text);
+                fathom.trackGoal("AUP54BAY", 0);
               }}
             >
               Copy to Clipboard

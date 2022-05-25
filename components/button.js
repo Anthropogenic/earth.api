@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function Button({ text, link, color, type, customClass }) {
+export default function Button({ text, link, color, type, customClass }) {
   return (
     <>
       <div className="">

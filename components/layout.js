@@ -21,11 +21,11 @@ export default function Layout({ preview, children }) {
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         <meta
           name="description"
-          content={`Bridges financial (Performance) and non-financial (ESG, Scientific Data) information about inventions, startups, public and private businesses so as to increase the velocity, efficiency and confidence in our ability to foster sufficient investment needed to manage anthropogenic climate change. `}
+          content={`Everything humans do affect the ecosystems around us. And with many of the earth's life support systems at tipping points/changing rapidly, there is a need for greater accessibility and modernization of how we use climate data and what we are building and researching.`}
         />
         <script
           src="https://cdn.usefathom.com/script.js"
-          data-site="PVOQQZKN"
+          data-site="CYSAYGVG"
           defer
         ></script>
       </Head>
