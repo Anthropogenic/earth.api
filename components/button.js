@@ -11,3 +11,15 @@ export default function Button({ text, link, color, type, customClass }) {
     </>
   );
 }
+
+export function BreakCrumbButton({ text, href }) {
+  return (
+    <>
+      <div className="font-semibold text-[16px] text-[#3695C4]">
+        <Link href={href}>
+          <a>← {text} Data</a>
+        </Link>
+      </div>
+    </>
+  );
+}

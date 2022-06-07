@@ -56,7 +56,7 @@ export default function Layout({ preview, children }) {
       <div className="bg-[#17253D] text-white">
         <Navigation />
       </div>
-      <main className="w-full bg-[#17253D] text-white ">
+      <main className="w-full bg-[#17253D] text-white min-h-screen">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">{children}</div>
       </main>
 

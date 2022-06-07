@@ -9,7 +9,10 @@ import SiteLogo from "../public/EarthApiLogo.png";
 
 const NavigationLinks = [
   { title: "try", href: "/try" },
-  { title: "data", href: "/data" },
+  {
+    title: "data",
+    href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
+  },
   { title: "contribute", href: "https://github.com/Anthropogenic/earth.api" },
 ];
 

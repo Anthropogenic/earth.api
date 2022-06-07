@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import useSWR from "swr";
 import { useState } from "react";
-
 import Layout from "../components/layout";
 import CodeBlock from "../components/codeblock";
 
