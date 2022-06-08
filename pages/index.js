@@ -4,6 +4,7 @@ import useSWR from "swr";
 import { useState } from "react";
 import Layout from "../components/layout";
 import CodeBlock from "../components/codeblock";
+import RequestAccess from "../components/request";
 
 import HeroMap from "../public/hero-dot-globe@2x.png";
 import StudentsHeroImage from "../public/assets/students@2x.png";
@@ -38,13 +39,6 @@ const ApiData = [
     description: "Sulfur Hexafluoride",
     href: "/sf6",
     heroImage: "/assets/emissions/sf6@2x.png",
-    ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
-  },
-  {
-    name: "Sea Levels",
-    description: "Water",
-    href: "/sea-levels",
-    heroImage: "/assets/emissions/seaLevels@2x.png",
     ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
   },
 ];
@@ -87,25 +81,6 @@ export default function Index() {
             quality={100}
           />
         </div>
-
-        {/* 
-          Pulsing dots code goes here
-          <span class="flex left-0 top-0 h-16 w-16">
-          <span class="animate-ping inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-          <span class=" inline-flex rounded-full h-16 w-16 bg-sky-500"></span>
-        </span>
-        <span class="flex left-0 top-0 h-16 w-16">
-          <span class="animate-ping inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-          <span class=" inline-flex rounded-full h-16 w-16 bg-sky-500"></span>
-        </span>
-        <span class="flex left-0 top-0 h-16 w-16">
-          <span class="animate-ping inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-          <span class=" inline-flex rounded-full h-16 w-16 bg-sky-500"></span>
-        </span>
-        <span class="flex left-0 top-0 h-16 w-16">
-          <span class="-ping inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-16 w-16 bg-sky-500"></span>
-        </span> */}
       </div>
       <div className="bg-[#17253D] text-white p-14">
         <div className="text-3xl font-extrabold">Try it</div>
@@ -141,9 +116,9 @@ export default function Index() {
           integrate, please reach out!
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-[#17253D]">
-          <div className="">
-            <div className="">
+        <div className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 sm:gap-x-6 lg:gap-8">
+          <div className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
+            <div className="object-center object-cover ">
               <Image
                 src={StudentsHeroImage}
                 alt="Picture of the author"
@@ -151,17 +126,25 @@ export default function Index() {
                 height={500}
               />
             </div>
-            <div className="bg-black text-[#3695C4] p-1 uppercase font-semibold">
-              Students
-            </div>
-            <div className="text-white text-sm">
-              All API routes come with starting examples built to help anyone
-              get started in python or javascript. And soon, our data explorer
-              will allow you to make charts right from earth API.
+
+            <div aria-hidden="true" className="" />
+            <div className="p-6 flex items-end">
+              <div>
+                <div className="font-semibold text-white">
+                  <div>
+                    <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
+                    <span className="p-1 bg-black">Students</span>
+                  </div>
+                </div>
+                <div aria-hidden="true" className="mt-1 text-sm text-white">
+                  All API routes come with starting examples built to help
+                  anyone get started in python or javascript. And soon, our data
+                  explorer will allow you to make charts right from earth API.
+                </div>
+              </div>
             </div>
           </div>
-
-          <div className="">
+          <div className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
             <div className="">
               <Image
                 src={ResearchersHeroImage}
@@ -170,18 +153,25 @@ export default function Index() {
                 height={500}
               />
             </div>
-            <div className="bg-black text-[#E14B6A] p-1 uppercase font-semibold">
-              Researchers
-            </div>
-            <div className="text-white text-sm">
-              The Earth API is a tool to easily call data from a variety of
-              publically available databases. For background, figure creation or
-              a quick double-check Earth API provides quick access.
+            <div aria-hidden="true" className="" />
+            <div className="p-6 flex items-end">
+              <div>
+                <div className="font-semibold text-white">
+                  <div>
+                    <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
+                    <span className="p-1 bg-black">Researchers</span>
+                  </div>
+                </div>
+                <div aria-hidden="true" className="mt-1 text-sm text-white">
+                  The Earth API is a tool to easily call data from a variety of
+                  publicly available databases. For background, figure creation
+                  or a quick double-check Earth API provides quick access.
+                </div>
+              </div>
             </div>
           </div>
-
-          <div className="">
-            <div className="">
+          <div className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
+            <div className="object-center object-cover ">
               <Image
                 src={CreatorsHeroImage}
                 alt="Picture of the author"
@@ -189,85 +179,104 @@ export default function Index() {
                 height={500}
               />
             </div>
-            <div className="bg-black text-[#E14B6A] p-1 uppercase font-semibold">
-              Creators
-            </div>
-            <div className="text-white text-sm">
-              Our API is for the next generation of product creators who are
-              looking to help in the efforts to reduce human-generated
-              emissions.
+            <div aria-hidden="true" className="" />
+            <div className="p-6 flex items-end">
+              <div>
+                <div className="font-semibold text-white">
+                  <div>
+                    <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
+                    <span className="p-1 bg-black">Creators</span>
+                  </div>
+                </div>
+                <div aria-hidden="true" className="mt-1 text-sm text-white">
+                  Our API is for the next generation of product creators who are
+                  looking to help in the efforts to reduce human-generated
+                  emissions.
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-[#17253D] text-white flex flex-wrap p-14">
-        <div className="border-t-2"></div>
-        <div className="w-full md:w-1/3">
-          <div className="text-3xl font-extrabold">Get it touch.</div>
-          <div className="">
-            We want to make our API as accessible as possible. We are building a
-            data explorer so anyone, regardless of their coding experience, can
-            create charts and graphics they need. The Explorer is in a closed
-            Alpha for now, but you can sign up below to get early access.
-          </div>
-        </div>
-        <div className="w-full md:w-2/3">
-          <form
-            action="https://getform.io/f/f4781e33-14fa-4329-9af5-3504aaf5bc5b"
-            method="POST"
-          >
-            <br />
-            <label className="text-base font-capitalize text-white py-9">
-              Email Address
-            </label>
-            <input
-              className="py-2 px-2 block w-full shadow-sm focus:ring-slate-500 focus:border-slate-500 border-gray-300 "
-              type="text"
-              id="name"
-              name="name"
-              placeholder="John Doe"
-              required
-            />
-            <br />
-
-            <label className="text-base font-capitalize text-white py-9">
-              Purpose
-            </label>
-
-            <select
-              className=" mt-2 block w-full py-2 px-2 text-base focus:ring-slate-500 focus:border-slate-500 border-gray-300 "
-              name="purpose"
-              id="purpose"
-            >
-              <option value="Select one" required>
-                Why are you interested?
-              </option>
-              <option value="Investor">Contrinuting Code</option>
-              <option value="Partner">Community Mand</option>
-              <option value="Customer">Adding Data Sources</option>
-              <option value="Other">Other</option>
-            </select>
-            <button
-              className="items-end mt-4 p-2 right-0 text-white border-white border-2 hover:text-[#202020] hover:bg-white"
-              type="submit"
-              onClick=""
-            >
-              Submit →
-            </button>
-          </form>
-        </div>
-      </div>
       <div className="bg-[#17253D] text-white p-14">
-        <div className="border-t-2"></div>
-        <div className="w-full md:w-1/3">
-          <div className="text-3xl font-extrabold">Built by Anthropogenic</div>
+        <div className="flex flex-row">
+          <div className="text-3xl font-extrabold font-LibreFranklin mb-12">
+            Explore Data Sets
+          </div>
 
-          <div className="">
-            We want to make our API as accessible as possible. We are building
-            data explorer so anyone, regardless of their coding experience, can
-            create charts and graphics they need. The Explorer is in a closed
-            Alpha for now, but you can sign up below to get early access.
+          <div className="flex-1 ">
+            {/* <div className="flex items-center my-4 p-[6px] bg-[#111826] rounded-md">
+              <div className="px-[9px] py-[9px]">
+                <Image src={SearchIcon} alt="Search Icon" />
+              </div>
+              <input
+                aria-label="Search"
+                type="text"
+                onChange={(e) => setSearchValue(e.target.value)}
+                placeholder=""
+                className="mx-4 block w-full text-white bg-[#111826] dark:text-gray-100"
+              />
+              <button className="bg-[#2d82b8] text-white rounded-md px-[9px] py-[9px]">
+                Search
+              </button>
+            </div> */}
+          </div>
+        </div>
+        <hr className="py-4" />
+        {!emissionsData.length && "No Data Found."}
+
+        <div className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 sm:gap-x-6 lg:gap-8">
+          {emissionsData.map((ApiData, i) => {
+            const { name, description, href, heroImage, ClassName } = ApiData;
+            return (
+              <div
+                key={i}
+                className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
+              >
+                <div className="object-center object-cover ">
+                  <Image
+                    src={heroImage}
+                    alt="Picture of the author"
+                    width={500}
+                    height={500}
+                  />
+                </div>
+
+                <div className="p-6 flex items-end">
+                  <div>
+                    <div className="font-semibold text-white">
+                      <div>
+                        <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
+                        <span className="p-1 bg-black">{name}</span>
+                      </div>
+                    </div>
+                    <div aria-hidden="true" className="mt-1 text-sm text-white">
+                      {description}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <RequestAccess />
+      <div className="bg-[#17253D] text-white p-14">
+        <div className="border-t-[1px] border-[#353f50] mb-12"></div>
+        <div className="w-full md:w-1/3">
+          <div className="text-3xl font-extrabold font-LibreFranklin mb-12">
+            One Open Source of Truth for Environmental Data
+          </div>
+
+          <div className="mb-12">
+            Anthropogenic is proud to offer and support earth.api. We believe
+            that the data available here impacts every living thing, and should
+            be shared and expanded for the greater good of humanity. We’re all
+            in this together and should have equal access to the data and
+            information that can help drive us towards a brighter and more
+            sustainable future.
           </div>
         </div>
       </div>

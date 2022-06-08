@@ -8,10 +8,26 @@ const FooterLinks = [
   {
     title: "Data Sources",
     links: [
-      { name: "co2 Data", href: "https://github.com/Anthropogenic/earth.api/tree/main/data", fathomEventCode: "" },
-      { name: "n20 Data", href: "https://github.com/Anthropogenic/earth.api/tree/main/data", fathomEventCode: "" },
-      { name: "sf6 Data", href: "https://github.com/Anthropogenic/earth.api/tree/main/data", fathomEventCode: "" },
-      { name: "Sea Level Rise", href: "https://github.com/Anthropogenic/earth.api/tree/main/data", fathomEventCode: "" },
+      {
+        name: "co2 Data",
+        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
+        fathomEventCode: "",
+      },
+      {
+        name: "n20 Data",
+        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
+        fathomEventCode: "",
+      },
+      {
+        name: "sf6 Data",
+        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
+        fathomEventCode: "",
+      },
+      {
+        name: "Sea Level Rise",
+        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
+        fathomEventCode: "",
+      },
     ],
   },
   {
