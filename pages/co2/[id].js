@@ -5,7 +5,7 @@ import useSWR from "swr";
 import Layout from "../../components/layout";
 import { Button, BreakCrumbButton } from "../../components/button";
 
-import Co2HeroImage from "../../public/emissions/C02.png";
+import Co2HeroImage from "../../public/assets/emissions/co2@2x.png";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -42,7 +42,6 @@ export default function EmissionsCo2() {
 
   return (
     <Layout>
-      {/* <YearlyEmissions data="" /> */}
       <div className="font-mono">
         <div className="pb-4 uppercase">
           <BreakCrumbButton text="CO2" href="/" />
@@ -74,7 +73,7 @@ export default function EmissionsCo2() {
             <div className="">Image arrow</div>
             <div className="">Image</div>
           </div>
-          <div className="w-full sm:w-2/3">
+          <div className="pl-4 w-full sm:w-2/3">
             <table className="w-full">
               <thead>
                 <tr className="border-b uppercase font-semibold text-[#96B0BD] text-[18px] leading-6">

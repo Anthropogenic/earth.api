@@ -78,7 +78,7 @@ export function EmissionsYearly({ data, source }) {
                   <Link href={data.unc}>
                     <a className="">FTP</a>
                   </Link>
-                  <Link href={data.unc}>
+                  <Link href={data.id}>
                     <a className="float-right">Details →</a>
                   </Link>
                 </td>

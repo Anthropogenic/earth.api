@@ -4,8 +4,9 @@ import useSWR from "swr";
 import Layout from "../../components/layout";
 import RequestAccess from "../../components/request";
 import { PageHero, EmissionsYearly } from "../../components/emissionsPage";
+import DataTableTabs from "../../components/tables";
 
-import Co2HeroImage from "../../public/emissions/C02.png";
+import Co2HeroImage from "../../public/assets/emissions/co2@2x.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -29,6 +30,9 @@ export default function Index() {
           image={Co2HeroImage}
           color="DF775E"
         />
+      </div>
+      <div className="flex">
+        <DataTableTabs YearHref="/" MonthHref="/" WeekHref="/" DayHref="/" />
       </div>
 
       <div className="flex bg-[#17253D] p-9">
