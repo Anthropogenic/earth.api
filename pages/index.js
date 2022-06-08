@@ -200,6 +200,80 @@ export default function Index() {
           </div>
         </div>
       </div>
+      <div className="bg-[#17253D] text-white p-14">
+        <div className="flex flex-row">
+          {/* <div className="p-4 bg-[#3695C4] rounded-l-md">Year</div>
+          <div className="p-4 bg-[#d0e5f1] ">Monthy</div>
+          <div className="p-4 bg-[#d0e5f1] rounded-r-md">Weekly</div> */}
+
+          <div className="flex-1 ">
+            <div className="flex items-center my-4 p-[6px] bg-[#111826] rounded-md">
+              <div className="px-[9px] py-[9px]">
+                <Image src={SearchIcon} alt="Search Icon" />
+              </div>
+              <input
+                aria-label="Search"
+                type="text"
+                onChange={(e) => setSearchValue(e.target.value)}
+                placeholder=""
+                className="mx-4 block w-full text-white bg-[#111826] dark:text-gray-100"
+              />
+              <button className="bg-[#2d82b8] text-white rounded-md px-[9px] py-[9px]">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+        <hr className="py-4" />
+        {!emissionsData.length && "No Data Found."}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-4">
+          {emissionsData.map((ApiData, i) => {
+            const { name, description, href, heroImage, ClassName } = ApiData;
+            return (
+              <div key={i} className="h-36">
+                <Link as={`${href}`} href="[href]" key={i}>
+                  <a className="no-underline font-semibold">
+                    <div className="relative">
+                      <div className="absolute">
+                        <div className="z-0 object-cover ">
+                          <Image
+                            src={`${heroImage}`}
+                            alt={`Image of ${name}`}
+                            width={500}
+                            height={500}
+                          />
+                        </div>
+                      </div>
+                      <div className="relative z-40">
+                        <div className="absolute inset-x-0 bottom-0">
+                          <span className={`${ClassName}`}>{name}</span>
+                        </div>
+                        <div className="absolute inset-x-0 bottom-0">
+                          <span className="bg-[#FFFFFF] text-[#101010] uppercase">
+                            {description}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {ApiData.map((data, index) => (
+            <div
+              key={data.index}
+              className="relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+            >
+              <div className="">{data.name}</div>
+              <div className="">{data.description}</div>
+            </div>
+          ))}
+        </div> */}
+      </div>
 
       <div className="bg-[#17253D] text-white flex flex-wrap p-14">
         <div className="border-t-2"></div>
