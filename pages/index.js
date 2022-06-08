@@ -6,9 +6,14 @@ import Layout from "../components/layout";
 import CodeBlock from "../components/codeblock";
 
 import HeroMap from "../public/hero-dot-globe@2x.png";
-import StudentsHeroImage from "../public/students.png";
-import ResearchersHeroImage from "../public/researchers.png";
-import CreatorsHeroImage from "../public/creators.png";
+import StudentsHeroImage from "../public/assets/students@2x.png";
+import ResearchersHeroImage from "../public/assets/researchers@2x.png";
+import CreatorsHeroImage from "../public/assets/creators@2x.png";
+import co2HeroImage from "../public/assets/emissions/co2@2x.png";
+import n20HeroImage from "../public/assets/emissions/n20@2x.png";
+import sf6HeroImage from "../public/assets/emissions/sf6@2x.png";
+import seaLevelHeroImage from "../public/assets/emissions/seaLevels@2x.png";
+
 import SearchIcon from "../public/icons/search-icon.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -18,29 +23,29 @@ const ApiData = [
     name: "co2",
     description: "words",
     href: "/co2",
-    heroImage: "",
-    ClassName: "",
+    heroImage: [],
+    ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
   },
   {
     name: "n2o",
     description: "Nitrous Oxide",
     href: "/n2o",
     heroImage: "",
-    ClassName: "",
+    ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
   },
   {
     name: "sf6",
     description: "Sulfur Hexafluoride",
     href: "/sf6",
     heroImage: "",
-    ClassName: "",
+    ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
   },
   {
     name: "Sea Levels",
     description: "Water",
     href: "/sea-levels",
-    heroImage: "",
-    ClassName: "",
+    heroImage: { co2HeroImage },
+    ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
   },
 ];
 
@@ -53,14 +58,14 @@ export default function Index() {
   });
   return (
     <Layout>
-      <div className="relative sm:overflow-hidden bg-[#17253D]">
+      <div className="relative sm:overflow-hidden bg-[#17253D] ">
         <div className=" absolute inset-x-0 bottom-0" />
 
         <div className="max-w-screen-xl max-h-fit mx-4 xl:mx-auto pt-14 font-PlayfairDisplay font-bold">
           <div className="flex flex-wrap p-10">
-            <div className="w-full sm:w-2/3 z-10">
+            <div className="w-full md:w-2/3 z-10">
               <div className="text-3xl md:text-6xl leading-tight font-PlayfairDisplay font-bold text-white">
-                Earth's data, now.
+                Earth's data, now<span className="text-[#8ADCFE]">.</span>
               </div>
               <div className="font-sans text-base font-2xl text-white py-9">
                 As a part of the web of life, Everything humans do affect the
@@ -104,7 +109,7 @@ export default function Index() {
       </div>
       <div className="bg-[#17253D] text-white p-14">
         <div className="text-3xl font-extrabold">Try it</div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="">
             To capture the greenhouse gases, we are starting data on ch4, co2,
             n20, and sf6 sourced from the National Oceanic and Atmospheric
@@ -127,7 +132,7 @@ export default function Index() {
         <div className="text-3xl pb-4 font-extrabold">Who is it for?</div>
         <div
           className="w-full 
-        sm:w-2/3 pb-8"
+        md:w-2/3 pb-8"
         >
           Earth API is a public project open to looking for active contributors
           to expand our database of climate information (Link to contact us). We
@@ -198,7 +203,6 @@ export default function Index() {
 
       <div className="bg-[#17253D] text-white p-14">
         <div className="flex flex-row">
-          <div className="flex-1">tabs</div>
           <div className="flex-1">
             <div className="flex ml-4 my-4 p-[6px] bg-[#111826] rounded-md">
               <div className="">
@@ -210,7 +214,7 @@ export default function Index() {
                 type="text"
                 onChange={(e) => setSearchValue(e.target.value)}
                 placeholder=""
-                className="mx-4 block w-full  text-gray-900 bg-white border  rounded-md  dark:text-gray-100"
+                className="mx-4 block w-full text-gray-900 bg-white border  rounded-md  dark:text-gray-100"
               />
               <button className="bg-[#2d82b8] text-white rounded-md px-[5px] py-[5px]">
                 Search
@@ -227,19 +231,27 @@ export default function Index() {
               <div key={i} className="block py-5">
                 <div className="block my-1">
                   <Link as={`${href}`} href="[href]" key={i}>
-                    <a className="underline text-lg font-semibold">
-                      <div className="object-cover pointer-events-none group-hover:opacity-75">
-                        {/* <Image
-                          src={heroImage}
-                          alt={`Image of ${name}`}
-                          width={500}
-                          height={500}
-                        /> */}
-                        image
+                    <a className="flex flex-wrap no-underline font-semibold">
+                      <div className="relative w-full bg-red-500">
+                        <div className="absolute z-0">
+                          <div className="z-0 h-full w-full object-cover">
+                            <Image
+                              src={co2HeroImage}
+                              alt={`Image of ${name}`}
+                              width={500}
+                              height={500}
+                            />
+                          </div>
+                        </div>
+                        <div className="z-40">
+                          <span className={`${ClassName}`}>{name}</span>
+                        </div>
+                        <div className="z-40">
+                          <span className="bg-[#FFFFFF] text-[#101010] uppercase">
+                            {description}
+                          </span>
+                        </div>
                       </div>
-
-                      <div className={`${href}`}>{name}</div>
-                      <div className="">{description}</div>
                     </a>
                   </Link>
                 </div>
@@ -262,11 +274,10 @@ export default function Index() {
         </div> */}
       </div>
 
-      <div className="bg-[#17253D] text-white flex p-14">
+      <div className="bg-[#17253D] text-white flex flex-wrap p-14">
         <div className="border-t-2"></div>
-        <div className="w-full w-1/3">
+        <div className="w-full md:w-1/3">
           <div className="text-3xl font-extrabold">Get it touch.</div>
-
           <div className="">
             We want to make our API as accessible as possible. We are building a
             data explorer so anyone, regardless of their coding experience, can
@@ -274,7 +285,7 @@ export default function Index() {
             Alpha for now, but you can sign up below to get early access.
           </div>
         </div>
-        <div className="w-full w-2/3">
+        <div className="w-full md:w-2/3">
           <form
             action="https://getform.io/f/f4781e33-14fa-4329-9af5-3504aaf5bc5b"
             method="POST"
@@ -310,7 +321,6 @@ export default function Index() {
               <option value="Customer">Adding Data Sources</option>
               <option value="Other">Other</option>
             </select>
-
             <button
               className="items-end mt-4 p-2 right-0 text-white border-white border-2 hover:text-[#202020] hover:bg-white"
               type="submit"
@@ -323,7 +333,7 @@ export default function Index() {
       </div>
       <div className="bg-[#17253D] text-white p-14">
         <div className="border-t-2"></div>
-        <div className="w-full w-1/3">
+        <div className="w-full md:w-1/3">
           <div className="text-3xl font-extrabold">Built by Anthropogenic</div>
 
           <div className="">
