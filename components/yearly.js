@@ -52,7 +52,7 @@ export default function EmissionsYearly({ data, source }) {
                 <td className="whitespace-nowrap px-3 py-4">{data.unc}</td>
                 <td className="whitespace-nowrap px-3 py-4">{data.unc}</td>
                 <td className="whitespace-nowrap px-3 py-4">{data.unc}</td>
-                <td className="whitespace-nowrap px-3 py-4">
+                <td className="whitespace-nowrap items-stretch px-3 py-4">
                   <Link href={data.unc}>
                     <a>{data.unc}</a>
                   </Link>

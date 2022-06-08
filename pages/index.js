@@ -23,28 +23,28 @@ const ApiData = [
     name: "co2",
     description: "words",
     href: "/co2",
-    heroImage: [],
+    heroImage: "/assets/emissions/co2@2x.png",
     ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
   },
   {
     name: "n2o",
     description: "Nitrous Oxide",
     href: "/n2o",
-    heroImage: "",
+    heroImage: "/assets/emissions/n20@2x.png",
     ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
   },
   {
     name: "sf6",
     description: "Sulfur Hexafluoride",
     href: "/sf6",
-    heroImage: "",
+    heroImage: "/assets/emissions/sf6@2x.png",
     ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
   },
   {
     name: "Sea Levels",
     description: "Water",
     href: "/sea-levels",
-    heroImage: { co2HeroImage },
+    heroImage: "/assets/emissions/seaLevels@2x.png",
     ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
   },
 ];
@@ -199,79 +199,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="bg-[#17253D] text-white p-14">
-        <div className="flex flex-row">
-          <div className="flex-1">
-            <div className="flex ml-4 my-4 p-[6px] bg-[#111826] rounded-md">
-              <div className="">
-                <Image src={SearchIcon} alt="Search Icon" />
-              </div>
-
-              <input
-                aria-label="Search"
-                type="text"
-                onChange={(e) => setSearchValue(e.target.value)}
-                placeholder=""
-                className="mx-4 block w-full text-gray-900 bg-white border  rounded-md  dark:text-gray-100"
-              />
-              <button className="bg-[#2d82b8] text-white rounded-md px-[5px] py-[5px]">
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
-        <hr />
-        {!emissionsData.length && "No Data Found."}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-4">
-          {emissionsData.map((ApiData, i) => {
-            const { name, description, href, heroImage, ClassName } = ApiData;
-            return (
-              <div key={i} className="block py-5">
-                <div className="block my-1">
-                  <Link as={`${href}`} href="[href]" key={i}>
-                    <a className="flex flex-wrap no-underline font-semibold">
-                      <div className="relative w-full bg-red-500">
-                        <div className="absolute z-0">
-                          <div className="z-0 h-full w-full object-cover">
-                            <Image
-                              src={co2HeroImage}
-                              alt={`Image of ${name}`}
-                              width={500}
-                              height={500}
-                            />
-                          </div>
-                        </div>
-                        <div className="z-40">
-                          <span className={`${ClassName}`}>{name}</span>
-                        </div>
-                        <div className="z-40">
-                          <span className="bg-[#FFFFFF] text-[#101010] uppercase">
-                            {description}
-                          </span>
-                        </div>
-                      </div>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <hr />
-
-        {/* <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {ApiData.map((data, index) => (
-            <div
-              key={data.index}
-              className="relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
-            >
-              <div className="">{data.name}</div>
-              <div className="">{data.description}</div>
-            </div>
-          ))}
-        </div> */}
       </div>
 
       <div className="bg-[#17253D] text-white flex flex-wrap p-14">

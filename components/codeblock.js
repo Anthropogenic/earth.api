@@ -81,7 +81,7 @@ export default function CodeBlock() {
             </button>
           </div>
           <div className="">
-            <div className="flex flex-wrap">
+            {/* <div className="flex flex-wrap">
               <Link href="https://glitch.com/@anthropogenic/earth-api-examples">
                 <a className="w-4">
                   <Image src={GlitchLogo} alt="Glitch Example Code" />
@@ -92,7 +92,7 @@ export default function CodeBlock() {
                   <Image src={CodeSandboxLogo} alt="Picture of the author" />
                 </a>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
