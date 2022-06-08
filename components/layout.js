@@ -10,8 +10,8 @@ export default function Layout({ preview, children }) {
   return (
     <>
       <Head>
-        <title>Earth API ✦ {PageTitle}</title>
-        {/* <link
+        <title>Earth API</title>
+        <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/favicon/apple-touch-icon.png"
@@ -34,7 +34,7 @@ export default function Layout({ preview, children }) {
           href="/favicon/safari-pinned-tab.svg"
           color="#000000"
         />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" /> */}
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="msapplication-config"
@@ -44,19 +44,23 @@ export default function Layout({ preview, children }) {
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         <meta
           name="description"
-          content={`Bridges financial (Performance) and non-financial (ESG, Scientific Data) information about inventions, startups, public and private businesses so as to increase the velocity, efficiency and confidence in our ability to foster sufficient investment needed to manage anthropogenic climate change. `}
+          content={`As a part of the web of life, Everything humans do affect the ecosystems around us. And with many of the earth's life support systems at tipping points/changing rapidly, there is a need for greater accessibility and modernization of how we use climate data and what we are building and researching.`}
         />
-        {/* <meta property="og:image" content={HOME_OG_IMAGE_URL} /> */}
+
         <script
           src="https://cdn.usefathom.com/script.js"
-          data-site="PVOQQZKN"
+          data-site="CYSAYGVG"
           defer
         ></script>
       </Head>
-      <Navigation />
-      <main className="w-full">{children}</main>
+      <div className="bg-[#17253D] text-white">
+        <Navigation />
+      </div>
+      <main className="w-full bg-[#17253D] text-white min-h-screen">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">{children}</div>
+      </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

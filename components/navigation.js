@@ -4,12 +4,16 @@ import Image from "next/image";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { SITE_NAME } from "../lib/constants";
+
 import SiteLogo from "../public/EarthApiLogo.png";
 
 const NavigationLinks = [
   { title: "try", href: "/try" },
-  { title: "data", href: "/data" },
-  { title: "contribute", href: "/contribute" },
+  {
+    title: "data",
+    href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
+  },
+  { title: "contribute", href: "https://github.com/Anthropogenic/earth.api" },
 ];
 
 function classNames(...classes) {
@@ -37,14 +41,14 @@ export default function Navigation() {
                 </div>
                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                   <div className="flex-shrink-0 flex items-center">
-                    <div className="invisible sm:visible absolute w-[40px] -left-8">
+                    <div className="invisible sm:visible absolute w-[40px]">
                       <Image src={SiteLogo} alt="Earth API Logo" />
                     </div>
                     <div className=" sm:block sm:ml-6">
                       <div className="flex space-x-4">
                         <Link href="/">
-                          <a className="text-2xl sm:text-xl relative py-2 font-bold text-white">
-                            {SITE_NAME}
+                          <a className="ml-8 text-2xl sm:text-xl relative py-2 font-bold text-white">
+                            earth<span className="text-[#8ADCFE]">.</span>api
                           </a>
                         </Link>
                       </div>
@@ -56,7 +60,7 @@ export default function Navigation() {
                     <div className="flex space-x-4">
                       {NavigationLinks.map((item, index) => (
                         <Link href={item.href} key={index}>
-                          <a className=" px-3 py-2 rounded-md text-sm font-medium font-sans text-base text-white">
+                          <a className=" px-3 py-2 rounded-md text-sm font-medium font-sans text-base text-white uppercase">
                             {item.title}
                           </a>
                         </Link>
@@ -71,9 +75,9 @@ export default function Navigation() {
               <div className="px-2 pt-2 pb-3 space-y-1 bg-[#17253D]">
                 {NavigationLinks.map((item, index) => (
                   <Disclosure.Button
-                    key={item.name}
+                    key={index}
                     href={item.href}
-                    className="block px-3 py-2 font-sans text-base text-white"
+                    className="block px-3 py-2 font-sans text-base text-white uppercase"
                   >
                     <Link href={item.href} key={index}>
                       <a className="font-sans text-base hover:text-white">

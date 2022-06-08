@@ -1,16 +1,39 @@
+import Link from "next/link";
+import Image from "next/image";
 import useSWR from "swr";
-import EmissionsYearly from "../../components/yearly";
+import Layout from "../../components/layout";
+import RequestAccess from "../../components/request";
+import { PageHero, EmissionsYearly } from "../../components/emissionsPage";
+import DataTableTabs from "../../components/tables";
+
+import Co2HeroImage from "../../public/assets/emissions/co2@2x.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/co2", fetcher);
+  const { data, error } = useSWR("/api/co2/yearly", fetcher);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
 
   return (
-    <>
+    <Layout>
+      <div className="bg-[#17253D] p-9">
+        <PageHero
+          title="CO2"
+          description="Small description about the data we are collecting for co2 etc.. this should probably be just one or two lines long."
+          type="Emissions Data"
+          image={Co2HeroImage}
+          color="DF775E"
+        />
+      </div>
+      <div className=" p-9">
+        <DataTableTabs YearHref="/" MonthHref="/" WeekHref="/" DayHref="/" />
+      </div>
+      <div className="flex">addational</div>
+      <div className="flex">
+        <RequestAccess />
+      </div>
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:items-center">
           <div className="sm:flex-auto">
@@ -51,7 +74,11 @@ export default function Index() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 bg-white">
-                    <EmissionsYearly key={data} data={data} />
+                    <EmissionsYearly
+                      key={data}
+                      data={data}
+                      source={data.source}
+                    />
                   </tbody>
                 </table>
               </div>
@@ -59,6 +86,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
