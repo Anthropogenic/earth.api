@@ -204,9 +204,9 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="bg-[#17253D] text-white p-14">
+      <div className="bg-[#17253D] text-white px-14">
         <div className="flex flex-row">
-          <div className="text-3xl font-extrabold font-LibreFranklin mb-12">
+          <div className="text-3xl font-extrabold font-LibreFranklin mb-6">
             Explore Data Sets
           </div>
 

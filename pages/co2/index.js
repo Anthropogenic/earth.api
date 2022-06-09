@@ -27,10 +27,12 @@ export default function Index() {
           color="DF775E"
         />
       </div>
-      <div className=" p-9">
+
+      {/* 
+        FIX: @gndclouds → work on moving monthly and yearlt intogrations
+        <div className=" p-9">
         <DataTableTabs YearHref="/" MonthHref="/" WeekHref="/" DayHref="/" />
-      </div>
-      <div className="flex">addational</div>
+      </div> */}
       <div className="flex">
         <RequestAccess />
       </div>

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import Co2HeroImage from "../public/assets/emissions/co2@2x.png";
+
 export function PageHero({ title, description, image, type, color }) {
   return (
     <div className="flex text-white">
@@ -14,8 +16,7 @@ export function PageHero({ title, description, image, type, color }) {
         <div className="w-full">{description}</div>
       </div>
       <div className={`ml-9 w-full sm:w-2/3 bg-[#${color}]`}>
-        Photo Will be imported Here
-        {/* <Image src={image} alt={`hero image for `} width={500} height={500} /> */}
+        <Image src={image} alt={`hero image for `} width={500} height={500} />
       </div>
     </div>
   );
