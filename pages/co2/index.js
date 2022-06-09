@@ -28,11 +28,6 @@ export default function Index() {
         />
       </div>
 
-      {/* 
-        FIX: @gndclouds → work on moving monthly and yearlt intogrations
-        <div className=" p-9">
-        <DataTableTabs YearHref="/" MonthHref="/" WeekHref="/" DayHref="/" />
-      </div> */}
       <div className="flex">
         <RequestAccess />
       </div>

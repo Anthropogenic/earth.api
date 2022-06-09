@@ -4,6 +4,7 @@ import Image from "next/image";
 import useSWR from "swr";
 import Layout from "../../components/layout";
 import { Button, BreakCrumbButton } from "../../components/button";
+import { EmissionsSummary } from "../../components/emissionsPage";
 
 import Co2HeroImage from "../../public/assets/emissions/co2@2x.png";
 
@@ -47,75 +48,18 @@ export default function EmissionsCo2() {
           <BreakCrumbButton text="CO2" href="/" />
         </div>
         {/* FIX: @gndclouds Make this a component */}
-        <div className="flex flex-wrap">
-          <div className="w-full sm:w-1/3 bg-red-500">
-            <div className="absolute inset-0">
-              <div className="z-0 h-full w-full object-cover">
-                {/* <Image src={Co2HeroImage} alt="Picture of the author" /> */}
-              </div>
-            </div>
-            <div className="z-10  ">
-              <span className="my-5 mx-4 px-4 py-1 font-bold bg-black text-[80px] text-[#FFC784]">
-                {data.mean}
-                <span className="text-[24px] uppercase">ppm</span>
-              </span>
-            </div>
 
-            <div className="">
-              <span className="bg-[#FFFFFF] text-black font-bold">
-                in {data.date}
-              </span>
-              <div className="">
-                {/* ADD: @gndclouds need logic for changing arrow state */}
-                Arrow
-              </div>
-            </div>
-            <div className="">Image arrow</div>
-            <div className="">Image</div>
-          </div>
-          <div className="pl-4 w-full sm:w-2/3">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b uppercase font-semibold text-[#96B0BD] text-[18px] leading-6">
-                  <th className="text-left ">Date</th>
-                  <th className="text-left ">Mean</th>
-                  <th className="text-left ">UNC</th>
-                  <th className="text-left ">Error</th>
-                  <th className="text-left ">Source</th>
-                </tr>
-              </thead>
-              <tbody className="border-b">
-                <tr className="">
-                  <td className="text-left">{data.date}</td>
-                  <td className="text-left">{data.mean}</td>
-                  <td className="text-left">{data.unc}</td>
-                  <td className="text-left">TBD</td>
-                  <td className="text-left">NOAA</td>
-                </tr>
-              </tbody>
-            </table>
-            <div className="">
-              <div className="">
-                <Link href={APIPath}>
-                  <a>{APIPath}</a>
-                </Link>
-              </div>
-
-              <div className="">Button</div>
-            </div>
-            <div className="flex">
-              {/* <Button text="Open FTP" link="" color="" type="" customClass />
-              <Button text="Download" link="" color="" type="" customClass />
-              <Button
-                text="Graph"
-                link="/explore"
-                color=""
-                type=""
-                customClass
-              /> */}
-            </div>
-          </div>
-        </div>
+        <EmissionsSummary
+          image="/"
+          unit={data.mean}
+          date={data.date}
+          tdate={data.date}
+          tmean={data.mean}
+          tunc={data.unc}
+          terror="tbd"
+          tsource="NOAA"
+          apiHref={APIPath}
+        />
       </div>
     </Layout>
   );

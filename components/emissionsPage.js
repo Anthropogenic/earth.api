@@ -91,3 +91,94 @@ export function EmissionsYearly({ data, source }) {
     </>
   );
 }
+
+export function EmissionsSummary({
+  image,
+  unit,
+  date,
+  tdate,
+  tmean,
+  tunc,
+  terror,
+  tsource,
+  apiHref,
+}) {
+  return (
+    <>
+      {" "}
+      <div className="flex flex-wrap">
+        <div className="w-full sm:w-1/3 bg-red-500">
+          <div className="">
+            <div className="h-full w-full object-cover">
+              {/* <Image src={Co2HeroImage} alt="Picture of the author" /> */}
+            </div>
+          </div>
+          <div className="z-10 ">
+            <span className="my-5 mx-4 px-4 py-1 font-bold bg-black text-[80px] text-[#FFC784]">
+              {unit}
+              <span className="text-[24px] uppercase">ppm</span>
+            </span>
+          </div>
+
+          <div className="">
+            <span className="bg-[#FFFFFF] text-black font-bold">in {date}</span>
+            <div className="">
+              {/* ADD: @gndclouds need logic for changing arrow state */}
+              Arrow
+            </div>
+          </div>
+          <div className="">Image arrow</div>
+          <div className="">Image</div>
+        </div>
+        <div className="pl-4 w-full sm:w-2/3">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b uppercase font-semibold text-[#96B0BD] text-[18px] leading-6">
+                <th className="text-left ">Date</th>
+                <th className="text-left ">Mean</th>
+                <th className="text-left ">UNC</th>
+                <th className="text-left ">Source</th>
+              </tr>
+            </thead>
+            <tbody className="border-b">
+              <tr className="">
+                <td className="text-left">{tdate}</td>
+                <td className="text-left">{tmean}</td>
+                <td className="text-left">{tunc}</td>
+                <td className="text-left">
+                  <Link
+                    href="https://www.noaa.gov/"
+                    target={"_blank"}
+                    rel={"noreferrer"}
+                  >
+                    <a>NOAA</a>
+                  </Link>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div className="">
+            <div className="">
+              <Link href={apiHref}>
+                <a>{apiHref}</a>
+              </Link>
+            </div>
+
+            <div className="">Button</div>
+          </div>
+          <div className="flex">
+            {/* <Button text="Open FTP" link="" color="" type="" customClass />
+        <Button text="Download" link="" color="" type="" customClass />
+        <Button
+          text="Graph"
+          link="/explore"
+          color=""
+          type=""
+          customClass
+        /> */}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
