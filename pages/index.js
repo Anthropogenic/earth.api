@@ -62,11 +62,10 @@ export default function Index() {
                 Earth's data, now<span className="text-[#8ADCFE]">.</span>
               </div>
               <div className="font-sans text-base font-2xl text-white py-9">
-                As a part of the web of life, Everything humans do affect the
-                ecosystems around us. And with many of the earth's life support
-                systems at tipping points/changing rapidly, there is a need for
-                greater accessibility and modernization of how we use climate
-                data and what we are building and researching.
+                Everything humans do affects our ecosystems. And with many of
+                the Earth's systems at tipping points, there must be
+                accessibility and modernization of climate data platforms. Enter
+                Earth API.
               </div>
             </div>
           </div>
@@ -86,11 +85,16 @@ export default function Index() {
         <div className="text-3xl font-extrabold">Try it</div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="">
-            To capture the greenhouse gases, we are starting data on ch4, co2,
-            n20, and sf6 sourced from the National Oceanic and Atmospheric
-            Administration, or NOAA (?). You can query the data at yearly and
-            monthly intervals. (select different emissions from the dropdown to
-            see example data sets). <br />
+            We are starting with the important greenhouse gases CH<sub>4</sub>,
+            CO
+            <sub>2</sub>, N<sub>2</sub>O, and SF<sub>6</sub> sourced from the
+            <Link href="https://www.noaa.gov">
+              <a>National Oceanic and Atmospheric Administration</a>
+            </Link>{" "}
+            (NOAA). You can query the data at yearly and monthly intervals.
+            (select different emissions from the dropdown to see example data
+            sets).
+            <br />
             <br />
             <Link href="/docs">
               <a className="text-[#3695C4] hover:underline">
@@ -163,9 +167,10 @@ export default function Index() {
                   </div>
                 </div>
                 <div aria-hidden="true" className="mt-1 text-sm text-white">
-                  The Earth API is a tool to easily call data from a variety of
-                  publicly available databases. For background, figure creation
-                  or a quick double-check Earth API provides quick access.
+                  The Earth API is a tool to easily called data from a variety
+                  of publicly available databases. For background, figure
+                  creation or a quick double-check Earth API provides quick
+                  access.
                 </div>
               </div>
             </div>
@@ -281,11 +286,10 @@ export default function Index() {
           </div>
 
           <div className="mb-12">
-            Anthropogenic is proud to offer and support earth.api. We believe
-            that the data available here impacts every living thing, and should
-            be shared and expanded for the greater good of humanity. We’re all
-            in this together and should have equal access to the data and
-            information that can help drive us towards a brighter and more
+            Anthropogenic is proud to offer and support earth.api. The ecosystem
+            data available here impact every living thing and should be shared
+            and expanded for the greater good. We’re all in this together and
+            equal access to information drives us towards a brighter and more
             sustainable future.
           </div>
         </div>
