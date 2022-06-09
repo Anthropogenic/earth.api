@@ -31,7 +31,7 @@ export default function RequestAccess() {
                 required
               />
 
-              <select
+              {/* <select
                 className="mt-2 block w-full py-2 px-2 text-base bg-[#111826] rounded"
                 name="purpose"
                 id="purpose"
@@ -43,7 +43,7 @@ export default function RequestAccess() {
                 <option value="Partner">Community Mand</option>
                 <option value="Customer">Adding Data Sources</option>
                 <option value="Other">Other</option>
-              </select>
+              </select> */}
 
               <button
                 className="items-end mt-4 p-2 right-0 text-[#2d82b8] bg-[#172c46] hover:text-[#202020] hover:bg-white rounded"

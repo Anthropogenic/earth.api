@@ -22,24 +22,24 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 const ApiData = [
   {
     name: "co2",
-    description: "words",
+    description: "Carbon Dioxide",
     href: "/co2",
     heroImage: "/assets/emissions/co2@2x.png",
-    ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
+    ClassName: "text-[#EE8770]",
   },
   {
     name: "n2o",
     description: "Nitrous Oxide",
     href: "/n2o",
     heroImage: "/assets/emissions/n20@2x.png",
-    ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
+    ClassName: "text-[#4FBC73]",
   },
   {
     name: "sf6",
     description: "Sulfur Hexafluoride",
     href: "/sf6",
     heroImage: "/assets/emissions/sf6@2x.png",
-    ClassName: "p-1 bg-[#101010] font-semibold font-sans uppercase",
+    ClassName: "text-[#77977F]",
   },
 ];
 
@@ -72,7 +72,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="h-full w-full object-cover overflow-hidden z-20 ">
+        <div className="h-full w-full object-cover  z-20">
           <Image
             src={HeroMap}
             alt="Picture of the author"
@@ -224,7 +224,8 @@ export default function Index() {
           </div>
         </div>
         <hr className="py-4" />
-        {!emissionsData.length && "No Data Found."}
+        {!emissionsData.length &&
+          "Opps! We either can't find or don't yet offer that data."}
 
         <div className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 sm:gap-x-6 lg:gap-8">
           {emissionsData.map((ApiData, i) => {
@@ -248,11 +249,20 @@ export default function Index() {
                     <div className="font-semibold text-white">
                       <div>
                         <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
-                        <span className="p-1 bg-black">{name}</span>
+                        <span
+                          className={`text-[42px] p-1 bg-[#101010] font-semibold font-sans uppercase ${ClassName}`}
+                        >
+                          {name}
+                        </span>
                       </div>
                     </div>
-                    <div aria-hidden="true" className="mt-1 text-sm text-white">
-                      {description}
+                    <div
+                      aria-hidden="true"
+                      className="mt-1  uppercase font-semibold text-sm "
+                    >
+                      <span className="p-1 bg-[#FFFFFF] text-[#101010]">
+                        {description}
+                      </span>
                     </div>
                   </div>
                 </div>
