@@ -23,11 +23,6 @@ const FooterLinks = [
         href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
         fathomEventCode: "",
       },
-      {
-        name: "Sea Level Rise",
-        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
-        fathomEventCode: "",
-      },
     ],
   },
   {
@@ -45,7 +40,7 @@ const FooterLinks = [
     links: [
       {
         name: "Why earth.api",
-        href: "/why",
+        href: "https://medium.com/anthropogenic/origin-stories-a-climate-company-born-from-fire-758b699e5ae1",
         fathomEventCode: "",
       },
       {
@@ -61,15 +56,39 @@ const FooterLinks = [
 export default function Footer({ preview, children }) {
   return (
     <>
-      <div className="flex bg-[#17253D] text-white">
-        <div className="flex-1 ">
+      <div className="flex flex-wrap bg-[#17253D] text-white">
+        <div className="w-full">
+          <div className="flex">
+            <div className="flex-1 pl-4"></div>
+            <div className="flex-1 pl-4"></div>
+            {FooterLinks.map((section, index) => (
+              <div
+                className="flex-1 border-l-[1px] border-[#353f50] pl-4"
+                key={`footer-${index}`}
+              >
+                <div className="font-bold mb-4">{section.title}</div>
+                <ul role="list" className="contents ">
+                  {section.links.map((link, i) => (
+                    <li key={`footer-${i}`}>
+                      <Link href={link.href} key={i}>
+                        <a className="text-[#3695C4]">{link.name}</a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="w-full">
           <div className="p-14">
             <div className="py-2">
               <Image
                 src={AnthropogenicLogo}
                 alt="Anthropogenic Logomark"
-                width={50}
-                height={50}
+                width={30}
+                height={30}
               />
             </div>
 
@@ -84,29 +103,13 @@ export default function Footer({ preview, children }) {
                     src={CCLogo}
                     alt="Earth API is published under CCC 4.0 Attribution-ShareAlike
                   4.0 International"
+                    width={20}
+                    height={20}
                   />
                 </a>
               </Link>{" "}
               2022 earth.api
             </div>
-          </div>
-        </div>
-        <div className="flex-none">
-          <div className="flex">
-            {FooterLinks.map((section, index) => (
-              <div className="flex-1 border-l-2 pl-4" key={`footer-${index}`}>
-                <div className="font-bold mb-4">{section.title}</div>
-                <ul role="list" className="contents ">
-                  {section.links.map((link, i) => (
-                    <li key={`footer-${i}`}>
-                      <Link href={link.href} key={i}>
-                        <a className="text-[#3695C4]">{link.name}</a>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 const ApiData = [
   {
     name: "co2",
-    description: "words",
+    description: "Carbon Dioxide",
     href: "/co2",
     heroImage: "/assets/emissions/co2@2x.png",
     ClassName: "text-[#EE8770]",
@@ -72,7 +72,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="h-full w-full object-cover overflow-hidden z-20 ">
+        <div className="h-full w-full object-cover  z-20">
           <Image
             src={HeroMap}
             alt="Picture of the author"
