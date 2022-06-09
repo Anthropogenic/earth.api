@@ -11,7 +11,7 @@ import StudentsHeroImage from "../public/assets/students@2x.png";
 import ResearchersHeroImage from "../public/assets/researchers@2x.png";
 import CreatorsHeroImage from "../public/assets/creators@2x.png";
 import co2HeroImage from "../public/assets/emissions/co2@2x.png";
-import n20HeroImage from "../public/assets/emissions/n20@2x.png";
+import n20HeroImage from "../public/assets/emissions/n2o@2x.png";
 import sf6HeroImage from "../public/assets/emissions/sf6@2x.png";
 import seaLevelHeroImage from "../public/assets/emissions/seaLevels@2x.png";
 
@@ -31,7 +31,7 @@ const ApiData = [
     name: "n2o",
     description: "Nitrous Oxide",
     href: "/n2o",
-    heroImage: "/assets/emissions/n20@2x.png",
+    heroImage: "/assets/emissions/n2o@2x.png",
     ClassName: "text-[#4FBC73]",
   },
   {

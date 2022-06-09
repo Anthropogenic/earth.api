@@ -6,7 +6,7 @@ import RequestAccess from "../../components/request";
 import { PageHero, EmissionsYearly } from "../../components/emissionsPage";
 import DataTableTabs from "../../components/tables";
 
-import n2oHeroImage from "../../public/assets/emissions/n2o@2x.png";
+import sf6HeroImage from "../../public/assets/emissions/sf6@2x.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -15,7 +15,7 @@ function classNames(...classes) {
 }
 
 export default function Index() {
-  const { data, error } = useSWR("/api/n2o", fetcher);
+  const { data, error } = useSWR("/api/sf6", fetcher);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
@@ -24,10 +24,10 @@ export default function Index() {
     <Layout>
       <div className="bg-[#17253D] p-9">
         <PageHero
-          title="n2o"
-          description="Small description about the data we are collecting for n2o etc.. this should probably be just one or two lines long."
+          title="sf6"
+          description="Small description about the data we are collecting for sf6 etc.. this should probably be just one or two lines long."
           type="Emissions Data"
-          image={n2oHeroImage}
+          image={sf6HeroImage}
           color="DF775E"
         />
       </div>

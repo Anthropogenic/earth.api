@@ -23,7 +23,7 @@ export default function EmissionsCo2() {
   const APIPath = "/api/" + asPath.substring(1);
 
   const { data, error } = useSWR(
-    () => query.id && `/api/co2/${query.id}`,
+    () => query.id && `/api/n2o/${query.id}`,
     fetcher
   );
 
