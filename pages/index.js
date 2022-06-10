@@ -236,7 +236,7 @@ export default function Index() {
           {emissionsData.map((ApiData, i) => {
             const { name, description, href, heroImage, ClassName } = ApiData;
             return (
-              <Link href={href}>
+              <Link key={i} href={href}>
                 <a>
                   <div
                     key={i}
