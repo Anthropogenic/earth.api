@@ -121,7 +121,7 @@ export default function Index() {
           integrate, please reach out!
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 sm:gap-x-6 lg:gap-8">
+        <div className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2  md:grid-cols-3  sm:gap-x-6 lg:gap-8">
           <div className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
             <div className="object-center object-cover ">
               <Image
@@ -210,30 +210,12 @@ export default function Index() {
           <div className="text-3xl font-extrabold font-LibreFranklin mb-6">
             Explore Data Sets
           </div>
-
-          <div className="flex-1 ">
-            {/* <div className="flex items-center my-4 p-[6px] bg-[#111826] rounded-md">
-              <div className="px-[9px] py-[9px]">
-                <Image src={SearchIcon} alt="Search Icon" />
-              </div>
-              <input
-                aria-label="Search"
-                type="text"
-                onChange={(e) => setSearchValue(e.target.value)}
-                placeholder=""
-                className="mx-4 block w-full text-white bg-[#111826] dark:text-gray-100"
-              />
-              <button className="bg-[#2d82b8] text-white rounded-md px-[9px] py-[9px]">
-                Search
-              </button>
-            </div> */}
-          </div>
         </div>
         <hr className="py-4" />
         {!emissionsData.length &&
           "Opps! We either can't find or don't yet offer that data."}
 
-        <div className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 sm:gap-x-6 lg:gap-8">
+        <div className="mt-6 grid grid-cols-1 gap-y-3 sm:grid-cols-2  md:grid-cols-3 sm:gap-x-3 lg:gap-8">
           {emissionsData.map((ApiData, i) => {
             const { name, description, href, heroImage, ClassName } = ApiData;
             return (
