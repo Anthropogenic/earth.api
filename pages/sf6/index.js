@@ -6,12 +6,12 @@ import RequestAccess from "../../components/request";
 import { PageHero, EmissionsYearly } from "../../components/emissionsPage";
 import DataTableTabs from "../../components/tables";
 
-import Co2HeroImage from "../../public/assets/emissions/co2Banner.png";
+import sf6HeroImage from "../../public/assets/emissions/sf6Banner.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/co2/yearly", fetcher);
+  const { data, error } = useSWR("/api/sf6/yearly", fetcher);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
@@ -20,14 +20,13 @@ export default function Index() {
     <Layout>
       <div className="bg-[#17253D] p-9">
         <PageHero
-          title="CO₂"
-          description="Carbon dioxide is a chemical compound occurring as a colorless gas with a density about 53% higher than that of dry air. ~ Wikipedia"
+          title="SF₆"
+          description="Sulfur hexafluoride or sulphur hexafluoride is an extremely potent and persistent greenhouse gas that is primarily utilized as an electrical insulator and arc suppressant. ~ Wikipedia"
           type="Emissions Data"
-          image={Co2HeroImage}
-          color="bg-[#DF775E]"
+          image={sf6HeroImage}
+          color="bg-[#77977F]"
         />
       </div>
-
       <div className="flex">
         <RequestAccess />
       </div>

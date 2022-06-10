@@ -6,12 +6,12 @@ import RequestAccess from "../../components/request";
 import { PageHero, EmissionsYearly } from "../../components/emissionsPage";
 import DataTableTabs from "../../components/tables";
 
-import Co2HeroImage from "../../public/assets/emissions/co2Banner.png";
+import n2oHeroImage from "../../public/assets/emissions/n2oBanner.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/co2/yearly", fetcher);
+  const { data, error } = useSWR("/api/n2o/yearly", fetcher);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
@@ -20,14 +20,13 @@ export default function Index() {
     <Layout>
       <div className="bg-[#17253D] p-9">
         <PageHero
-          title="CO₂"
-          description="Carbon dioxide is a chemical compound occurring as a colorless gas with a density about 53% higher than that of dry air. ~ Wikipedia"
+          title="N₂O"
+          description="Nitrous oxide, commonly known as laughing gas, nitrous, or nos, is a chemical compound, an oxide of nitrogen with the formula N₂O. ~ Wikipedia"
           type="Emissions Data"
-          image={Co2HeroImage}
-          color="bg-[#DF775E]"
+          image={n2oHeroImage}
+          color="bg-[#4FBC73]"
         />
       </div>
-
       <div className="flex">
         <RequestAccess />
       </div>

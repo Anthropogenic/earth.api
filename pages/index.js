@@ -11,7 +11,7 @@ import StudentsHeroImage from "../public/assets/students@2x.png";
 import ResearchersHeroImage from "../public/assets/researchers@2x.png";
 import CreatorsHeroImage from "../public/assets/creators@2x.png";
 import co2HeroImage from "../public/assets/emissions/co2@2x.png";
-import n20HeroImage from "../public/assets/emissions/n20@2x.png";
+import n20HeroImage from "../public/assets/emissions/n2o@2x.png";
 import sf6HeroImage from "../public/assets/emissions/sf6@2x.png";
 import seaLevelHeroImage from "../public/assets/emissions/seaLevels@2x.png";
 
@@ -21,21 +21,21 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const ApiData = [
   {
-    name: "co2",
+    name: "CO₂",
     description: "Carbon Dioxide",
     href: "/co2",
     heroImage: "/assets/emissions/co2@2x.png",
     ClassName: "text-[#EE8770]",
   },
   {
-    name: "n2o",
+    name: "N₂O",
     description: "Nitrous Oxide",
     href: "/n2o",
-    heroImage: "/assets/emissions/n20@2x.png",
+    heroImage: "/assets/emissions/n2o@2x.png",
     ClassName: "text-[#4FBC73]",
   },
   {
-    name: "sf6",
+    name: "SF₆",
     description: "Sulfur Hexafluoride",
     href: "/sf6",
     heroImage: "/assets/emissions/sf6@2x.png",
@@ -62,11 +62,10 @@ export default function Index() {
                 Earth's data, now<span className="text-[#8ADCFE]">.</span>
               </div>
               <div className="font-sans text-base font-2xl text-white py-9">
-                As a part of the web of life, Everything humans do affect the
-                ecosystems around us. And with many of the earth's life support
-                systems at tipping points/changing rapidly, there is a need for
-                greater accessibility and modernization of how we use climate
-                data and what we are building and researching.
+                Everything humans do affects our ecosystems. And with many of
+                the Earth's systems at tipping points, there must be
+                accessibility and modernization of climate data platforms. Enter
+                Earth API.
               </div>
             </div>
           </div>
@@ -86,11 +85,16 @@ export default function Index() {
         <div className="text-3xl font-extrabold">Try it</div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="">
-            To capture the greenhouse gases, we are starting data on ch4, co2,
-            n20, and sf6 sourced from the National Oceanic and Atmospheric
-            Administration, or NOAA (?). You can query the data at yearly and
-            monthly intervals. (select different emissions from the dropdown to
-            see example data sets). <br />
+            We are starting with the important greenhouse gases CH<sub>4</sub>,
+            CO
+            <sub>2</sub>, N<sub>2</sub>O, and SF<sub>6</sub> sourced from the
+            <Link href="https://www.noaa.gov">
+              <a>National Oceanic and Atmospheric Administration</a>
+            </Link>{" "}
+            (NOAA). You can query the data at yearly and monthly intervals.
+            (select different emissions from the dropdown to see example data
+            sets).
+            <br />
             <br />
             <Link href="/docs">
               <a className="text-[#3695C4] hover:underline">
@@ -163,9 +167,10 @@ export default function Index() {
                   </div>
                 </div>
                 <div aria-hidden="true" className="mt-1 text-sm text-white">
-                  The Earth API is a tool to easily call data from a variety of
-                  publicly available databases. For background, figure creation
-                  or a quick double-check Earth API provides quick access.
+                  The Earth API is a tool to easily called data from a variety
+                  of publicly available databases. For background, figure
+                  creation or a quick double-check Earth API provides quick
+                  access.
                 </div>
               </div>
             </div>
@@ -199,9 +204,9 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="bg-[#17253D] text-white p-14">
+      <div className="bg-[#17253D] text-white px-14">
         <div className="flex flex-row">
-          <div className="text-3xl font-extrabold font-LibreFranklin mb-12">
+          <div className="text-3xl font-extrabold font-LibreFranklin mb-6">
             Explore Data Sets
           </div>
 
@@ -231,42 +236,46 @@ export default function Index() {
           {emissionsData.map((ApiData, i) => {
             const { name, description, href, heroImage, ClassName } = ApiData;
             return (
-              <div
-                key={i}
-                className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
-              >
-                <div className="object-center object-cover ">
-                  <Image
-                    src={heroImage}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                  />
-                </div>
+              <Link key={i} href={href}>
+                <a>
+                  <div
+                    key={i}
+                    className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
+                  >
+                    <div className="object-center object-cover ">
+                      <Image
+                        src={heroImage}
+                        alt="Picture of the author"
+                        width={500}
+                        height={500}
+                      />
+                    </div>
 
-                <div className="p-6 flex items-end">
-                  <div>
-                    <div className="font-semibold text-white">
+                    <div className="p-6 flex items-end">
                       <div>
-                        <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
-                        <span
-                          className={`text-[42px] p-1 bg-[#101010] font-semibold font-sans uppercase ${ClassName}`}
+                        <div className="font-semibold text-white">
+                          <div>
+                            <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
+                            <span
+                              className={`text-[42px] p-1 bg-[#101010] font-semibold font-sans uppercase ${ClassName}`}
+                            >
+                              {name}
+                            </span>
+                          </div>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          className="mt-1  uppercase font-semibold text-sm "
                         >
-                          {name}
-                        </span>
+                          <span className="p-1 bg-[#FFFFFF] text-[#101010]">
+                            {description}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div
-                      aria-hidden="true"
-                      className="mt-1  uppercase font-semibold text-sm "
-                    >
-                      <span className="p-1 bg-[#FFFFFF] text-[#101010]">
-                        {description}
-                      </span>
-                    </div>
                   </div>
-                </div>
-              </div>
+                </a>
+              </Link>
             );
           })}
         </div>
@@ -281,11 +290,10 @@ export default function Index() {
           </div>
 
           <div className="mb-12">
-            Anthropogenic is proud to offer and support earth.api. We believe
-            that the data available here impacts every living thing, and should
-            be shared and expanded for the greater good of humanity. We’re all
-            in this together and should have equal access to the data and
-            information that can help drive us towards a brighter and more
+            Anthropogenic is proud to offer and support earth.api. The ecosystem
+            data available here impact every living thing and should be shared
+            and expanded for the greater good. We’re all in this together and
+            equal access to information drives us towards a brighter and more
             sustainable future.
           </div>
         </div>

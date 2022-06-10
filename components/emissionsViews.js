@@ -14,7 +14,7 @@ const ApiData = [
     name: "n2o",
     description: "Nitrous Oxide",
     href: "/n2o",
-    heroImage: "/assets/emissions/n20@2x.png",
+    heroImage: "/assets/emissions/n2o@2x.png",
     ClassName: "text-[#4FBC73]",
   },
   {

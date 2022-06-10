@@ -6,7 +6,7 @@ import Layout from "../../components/layout";
 import { Button, BreakCrumbButton } from "../../components/button";
 import { EmissionsSummary } from "../../components/emissionsPage";
 
-import Co2HeroImage from "../../public/assets/emissions/co2@2x.png";
+import sf6HeroImage from "../../public/assets/emissions/sf6@2x.png";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -18,12 +18,12 @@ const fetcher = async (url) => {
   return data;
 };
 
-export default function EmissionsCo2() {
+export default function Emissionssf6() {
   const { query, asPath, pathname } = useRouter();
   const APIPath = "/api/" + asPath.substring(1);
 
   const { data, error } = useSWR(
-    () => query.id && `/api/co2/${query.id}`,
+    () => query.id && `/api/sf6/${query.id}`,
     fetcher
   );
 
@@ -45,7 +45,7 @@ export default function EmissionsCo2() {
     <Layout>
       <div className="font-mono">
         <div className="pb-4 uppercase">
-          <BreakCrumbButton text="CO2" href="/" />
+          <BreakCrumbButton text="sf6" href="/" />
         </div>
         {/* FIX: @gndclouds Make this a component */}
 

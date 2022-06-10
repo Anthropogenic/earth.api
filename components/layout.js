@@ -59,8 +59,9 @@ export default function Layout({ preview, children }) {
       <main className="w-full bg-[#17253D] text-white min-h-screen">
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">{children}</div>
       </main>
-
-      <Footer />
+      <div className="bg-[#17253D] text-white">
+        <Footer />
+      </div>
     </>
   );
 }

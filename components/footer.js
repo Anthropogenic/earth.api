@@ -56,7 +56,7 @@ const FooterLinks = [
 export default function Footer({ preview, children }) {
   return (
     <>
-      <div className="flex flex-wrap bg-[#17253D] text-white">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex flex-wrap bg-[#17253D] text-white">
         <div className="w-full">
           <div className="flex">
             <div className="flex-1 pl-4"></div>

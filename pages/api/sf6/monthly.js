@@ -1,0 +1,5 @@
+import { sf6Monthly } from "../../../data/sf6";
+
+export default function handler(req, res) {
+  res.status(200).json(sf6Monthly);
+}
