@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import useSWR from "swr";
 import Layout from "../../components/layout";
 import RequestAccess from "../../components/request";
@@ -12,6 +13,8 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
   const { data, error } = useSWR("/api/n2o/yearly", fetcher);
+  const { asPath } = useRouter();
+  const DataRouteURL = asPath.substring(1);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
@@ -37,6 +40,9 @@ export default function Index() {
                     key={data}
                     data={data}
                     source={data.source}
+                    apiHref={DataRouteURL}
+                    ftpHref={DataRouteURL}
+                    childHref={DataRouteURL}
                   />
                 </div>
               </div>
