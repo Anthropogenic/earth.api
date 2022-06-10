@@ -7,7 +7,7 @@ export function PageHero({ title, description, image, type, color }) {
   return (
     <div className="flex text-white">
       <div className="w-full sm:w-1/3">
-        <div className={`w-full text-[144px] font-bold bg-[#0f131d] ${color}`}>
+        <div className={`w-full text-[144px] font-bold  ${color}`}>
           <span className={`text-[#17253D] ${color}`}>{title}</span>
         </div>
         <div className="my-4 p-2 uppercase leading-6 bg-white text-black text-[24px]">
@@ -22,7 +22,7 @@ export function PageHero({ title, description, image, type, color }) {
   );
 }
 
-export function EmissionsYearly({ data, source }) {
+export function EmissionsYearly({ data, source, apiHref, ftpHref, childHref }) {
   return (
     <>
       <div className="bg-[#17253D]">
@@ -72,14 +72,14 @@ export function EmissionsYearly({ data, source }) {
                     <a>NOAA</a>
                   </Link>
                 </td>
-                <td className="flex whitespace-nowrap px-3 py-4 text-[#3695C4]">
-                  <Link href={data.unc}>
+                <td className="flex justify-between px-3 py-4 text-[#3695C4]">
+                  <Link href={"/api/" + apiHref + "/" + data.id}>
                     <a className="">API</a>
                   </Link>
-                  <Link href={data.unc}>
+                  <Link href={ftpHref}>
                     <a className="">FTP</a>
                   </Link>
-                  <Link href={data.id}>
+                  <Link href={"/" + childHref + "/" + data.id}>
                     <a className="float-right">Details →</a>
                   </Link>
                 </td>

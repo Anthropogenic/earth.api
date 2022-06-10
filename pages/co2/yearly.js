@@ -31,9 +31,6 @@ export default function Index() {
           color="DF775E"
         />
       </div>
-      <div className="flex">
-        <DataTableTabs YearHref="/" MonthHref="/" WeekHref="/" DayHref="/" />
-      </div>
 
       <div className="flex bg-[#17253D] p-9">
         <div className="w-full">
