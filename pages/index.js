@@ -21,21 +21,21 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const ApiData = [
   {
-    name: "co2",
+    name: "CO₂",
     description: "Carbon Dioxide",
     href: "/co2",
     heroImage: "/assets/emissions/co2@2x.png",
     ClassName: "text-[#EE8770]",
   },
   {
-    name: "n2o",
+    name: "N₂O",
     description: "Nitrous Oxide",
     href: "/n2o",
     heroImage: "/assets/emissions/n2o@2x.png",
     ClassName: "text-[#4FBC73]",
   },
   {
-    name: "sf6",
+    name: "SF₆",
     description: "Sulfur Hexafluoride",
     href: "/sf6",
     heroImage: "/assets/emissions/sf6@2x.png",
@@ -236,42 +236,46 @@ export default function Index() {
           {emissionsData.map((ApiData, i) => {
             const { name, description, href, heroImage, ClassName } = ApiData;
             return (
-              <div
-                key={i}
-                className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
-              >
-                <div className="object-center object-cover ">
-                  <Image
-                    src={heroImage}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                  />
-                </div>
+              <Link href={href}>
+                <a>
+                  <div
+                    key={i}
+                    className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
+                  >
+                    <div className="object-center object-cover ">
+                      <Image
+                        src={heroImage}
+                        alt="Picture of the author"
+                        width={500}
+                        height={500}
+                      />
+                    </div>
 
-                <div className="p-6 flex items-end">
-                  <div>
-                    <div className="font-semibold text-white">
+                    <div className="p-6 flex items-end">
                       <div>
-                        <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
-                        <span
-                          className={`text-[42px] p-1 bg-[#101010] font-semibold font-sans uppercase ${ClassName}`}
+                        <div className="font-semibold text-white">
+                          <div>
+                            <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
+                            <span
+                              className={`text-[42px] p-1 bg-[#101010] font-semibold font-sans uppercase ${ClassName}`}
+                            >
+                              {name}
+                            </span>
+                          </div>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          className="mt-1  uppercase font-semibold text-sm "
                         >
-                          {name}
-                        </span>
+                          <span className="p-1 bg-[#FFFFFF] text-[#101010]">
+                            {description}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div
-                      aria-hidden="true"
-                      className="mt-1  uppercase font-semibold text-sm "
-                    >
-                      <span className="p-1 bg-[#FFFFFF] text-[#101010]">
-                        {description}
-                      </span>
-                    </div>
                   </div>
-                </div>
-              </div>
+                </a>
+              </Link>
             );
           })}
         </div>

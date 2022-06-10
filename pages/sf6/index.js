@@ -6,12 +6,12 @@ import RequestAccess from "../../components/request";
 import { PageHero, EmissionsYearly } from "../../components/emissionsPage";
 import DataTableTabs from "../../components/tables";
 
-import N2oHeroImage from "../../public/assets/emissions/n2o@2x.png";
+import sf6HeroImage from "../../public/assets/emissions/sf6Banner.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/n2o/yearly", fetcher);
+  const { data, error } = useSWR("/api/sf6/yearly", fetcher);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
@@ -20,68 +20,15 @@ export default function Index() {
     <Layout>
       <div className="bg-[#17253D] p-9">
         <PageHero
-          title="N20"
-          description="Small description about the data we are collecting for n2o etc.. this should probably be just one or two lines long."
+          title="SF₆"
+          description="Sulfur hexafluoride or sulphur hexafluoride is an extremely potent and persistent greenhouse gas that is primarily utilized as an electrical insulator and arc suppressant. ~ Wikipedia"
           type="Emissions Data"
-          image={n2oHeroImage}
-          color="DF775E"
+          image={sf6HeroImage}
+          color="bg-[#77977F]"
         />
       </div>
-
       <div className="flex">
         <RequestAccess />
-      </div>
-      <div className="px-4 sm:px-6 lg:px-8">
-        <div className="sm:flex sm:items-center">
-          <div className="sm:flex-auto">
-            <h1 className="text-xl font-semibold text-gray-900">
-              Yearly Carbon Data
-            </h1>
-            <p className="mt-2 text-sm text-gray-700">
-              A list of all the users in your account including their name,
-              title, email and role.
-            </p>
-          </div>
-        </div>
-        <div className="mt-8 flex flex-col">
-          <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-              <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                <table className="min-w-full divide-y divide-gray-300">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th
-                        scope="col"
-                        className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Year
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        Mean
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        UNC
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-200 bg-white">
-                    <EmissionsYearly
-                      key={data}
-                      data={data}
-                      source={data.source}
-                    />
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </Layout>
   );
