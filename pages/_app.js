@@ -18,6 +18,7 @@ function App({ Component, pageProps }) {
         "www.hge.earth",
         "earth.api",
         "www.earth.api",
+        "api.anthropogenic.com",
       ],
     });
 
