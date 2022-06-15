@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Highlight from "react-highlight";
 import Select from "react-select";
+import { CopyBlock, nord } from "react-code-blocks";
 
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
@@ -15,6 +16,8 @@ import GitHubLogo from "../public/GitHubLogo.png";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+let ExampleCode = `fetch("https://api.hge.earth/api/co2/yearly", requestOptions).then(response => response.text()).then(result => console.log(result)).catch(error => console.log('error', error));
+`;
 
 const ExampleLinks = [
   { title: "Glitch", href: "/news" },
@@ -42,7 +45,12 @@ const ExamplesToggleData = [
   },
 ];
 
-export default function CodeBlock() {
+export default function CodeBlockDemo({
+  code,
+  language,
+  showLineNumbers,
+  startingLineNumber,
+}) {
   const text =
     "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
   return (
@@ -57,20 +65,17 @@ export default function CodeBlock() {
           </div>
         </div>
         <div className="flex flex-wrap border-2 border-[#17253D]">
-          <div className="w-full sm:w-1/2">
-            <pre>code</pre>
-          </div>
-          <div className="w-full sm:w-1/2">
-            <pre>code code code</pre>
-            <pre>code code code</pre>
-            <pre>code code code</pre>
-            <pre>code code code</pre>
-            <pre>code code code</pre>
-            <pre>code code code</pre>
+          <div className="w-full">
+            <CopyBlock
+              text={ExampleCode}
+              language="javascript"
+              wrapLines
+              theme={nord}
+            />
           </div>
         </div>
         <div className="flex flex-row">
-          <div className="m-2 p-2 bg-[#3695C4] rounded">
+          {/* <div className="m-2 p-2 bg-[#3695C4] rounded">
             <button
               onClick={() => {
                 navigator.clipboard.writeText(text);
@@ -79,7 +84,7 @@ export default function CodeBlock() {
             >
               Copy to Clipboard
             </button>
-          </div>
+          </div> */}
           <div className="">
             {/* <div className="flex flex-wrap">
               <Link href="https://glitch.com/@anthropogenic/earth-api-examples">

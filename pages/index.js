@@ -4,7 +4,7 @@ import useSWR from "swr";
 import { useState } from "react";
 
 import Layout from "../components/layout";
-import CodeBlock from "../components/codeblock";
+import CodeBlockDemo from "../components/codeblock";
 import RequestAccess from "../components/request";
 
 import HeroMap from "../public/hero-dot-globe@2x.png";
@@ -104,7 +104,15 @@ export default function Index() {
             </Link>
           </div>
           <div className="col-span-2">
-            <CodeBlock />
+            <CodeBlockDemo
+              code="fetch('http://example.com/movies.json') 
+               .then(response => response.json()) 
+               
+               .then(data => console.log(data)); "
+              language="js"
+              showLineNumbers="false"
+              startingLineNumber=""
+            />
           </div>
         </div>
       </div>

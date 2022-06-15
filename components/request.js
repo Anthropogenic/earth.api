@@ -19,7 +19,7 @@ export default function RequestAccess() {
           </div>
           <div className="w-full md:w-2/3">
             <form
-              action="https://getform.io/f/f4781e33-14fa-4329-9af5-3504aaf5bc5b"
+              action="https://getform.io/f/223de8c6-df2c-4e74-b50e-9d461bc7c5cc"
               method="POST"
             >
               <input
