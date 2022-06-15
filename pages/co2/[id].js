@@ -45,7 +45,7 @@ export default function EmissionsCo2() {
     <Layout>
       <div className="font-mono">
         <div className="pb-4 uppercase">
-          <BreakCrumbButton text="CO2" href="/" />
+          <BreakCrumbButton text="CO₂" href="/co2" />
         </div>
         {/* FIX: @gndclouds Make this a component */}
 
