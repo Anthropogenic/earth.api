@@ -6,7 +6,7 @@ import Layout from "../../components/layout";
 import { Button, BreakCrumbButton } from "../../components/button";
 import { EmissionsSummary } from "../../components/emissionsPage";
 
-import Co2HeroImage from "../../public/assets/emissions/co2@2x.png";
+import n2oHeroImage from "../../public/assets/emissions/co2@2x.png";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -45,12 +45,13 @@ export default function EmissionsCo2() {
     <Layout>
       <div className="font-mono">
         <div className="pb-4 uppercase">
-          <BreakCrumbButton text="CO2" href="/" />
+          <BreakCrumbButton text="N₂O" href="/n2o" />
         </div>
         {/* FIX: @gndclouds Make this a component */}
 
         <EmissionsSummary
-          image="/"
+          image={n2oHeroImage}
+          measurement={data.mean}
           unit={data.mean}
           date={data.date}
           tdate={data.date}

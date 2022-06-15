@@ -5,7 +5,7 @@ export default function RequestAccess() {
         <div className="border-t-[1px] border-[#353f50] mb-12"></div>
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/3">
-            <div className="text-3xl font-extrabold font-LibreFranklin mb-12">
+            <div className="text-3xl font-extrabold font-LibreFranklin mb-12 sm:ml-4">
               Request Early Access to Data Explorer
             </div>
 
@@ -19,7 +19,7 @@ export default function RequestAccess() {
           </div>
           <div className="w-full md:w-2/3">
             <form
-              action="https://getform.io/f/f4781e33-14fa-4329-9af5-3504aaf5bc5b"
+              action="https://getform.io/f/223de8c6-df2c-4e74-b50e-9d461bc7c5cc"
               method="POST"
             >
               <input
