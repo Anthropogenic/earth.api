@@ -50,6 +50,7 @@ export default function Layout({ preview, children }) {
         <script
           src="https://cdn.usefathom.com/script.js"
           data-site="CYSAYGVG"
+          data-honor-dnt="true"
           defer
         ></script>
       </Head>
