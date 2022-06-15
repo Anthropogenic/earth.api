@@ -5,7 +5,7 @@ export default function RequestAccess() {
         <div className="border-t-[1px] border-[#353f50] mb-12"></div>
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/3">
-            <div className="text-3xl font-extrabold font-LibreFranklin mb-12">
+            <div className="text-3xl font-extrabold font-LibreFranklin mb-12 sm:ml-4">
               Request Early Access to Data Explorer
             </div>
 

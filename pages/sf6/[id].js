@@ -45,12 +45,13 @@ export default function Emissionssf6() {
     <Layout>
       <div className="font-mono">
         <div className="pb-4 uppercase">
-          <BreakCrumbButton text="sf6" href="/" />
+          <BreakCrumbButton text="SF₆" href="/sf6" />
         </div>
         {/* FIX: @gndclouds Make this a component */}
 
         <EmissionsSummary
-          image="/"
+          image={sf6HeroImage}
+          measurement={data.mean}
           unit={data.mean}
           date={data.date}
           tdate={data.date}
