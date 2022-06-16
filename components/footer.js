@@ -38,7 +38,6 @@ const FooterLinks = [
         href: "https://github.com/Anthropogenic/earth.api",
         fathomEventCode: "",
       },
-      { name: "Discord Community", href: "/", fathomEventCode: "" },
     ],
   },
   {
