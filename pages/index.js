@@ -103,7 +103,7 @@ export default function Index() {
               </a>
             </Link>
           </div>
-          <div className="hidden sm:visible col-span-2">
+          <div className="overflow-hidden col-span-2">
             <CodeBlockDemo
               code="fetch('http://example.com/movies.json') 
                .then(response => response.json()) 
