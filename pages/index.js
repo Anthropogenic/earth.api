@@ -90,7 +90,7 @@ export default function Index() {
             CO
             <sub>2</sub>, N<sub>2</sub>O, and SF<sub>6</sub> sourced from the
             <Link href="https://www.noaa.gov">
-              <a>National Oceanic and Atmospheric Administration</a>
+              <a> National Oceanic and Atmospheric Administration</a>
             </Link>{" "}
             (NOAA). You can query the data at yearly and monthly intervals.
             (select different emissions from the dropdown to see example data
