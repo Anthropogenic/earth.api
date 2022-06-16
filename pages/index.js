@@ -231,7 +231,7 @@ export default function Index() {
                 <a>
                   <div
                     key={i}
-                    className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
+                    className="aspect-w-2 aspect-h-1 overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
                   >
                     <div className="object-center object-cover ">
                       <Image
