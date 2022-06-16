@@ -111,7 +111,7 @@ export function EmissionsSummary({
   return (
     <>
       {" "}
-      <div className="mt-6 grid grid-cols-1 gap-y-3 sm:grid-cols-2">
+      <div className="mt-6 mb-6 grid grid-cols-1 gap-y-3 sm:grid-cols-2 md:grid-cols-3 sm:gap-x-3 lg:gap-8">
         <div className="aspect-w-2 aspect-h-1 overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
           <div className="object-center object-cover ">
             <Image
@@ -126,7 +126,7 @@ export function EmissionsSummary({
             <div>
               <div className="font-semibold text-white">
                 <div>
-                  <span className="absolute inset-0 text-[#E14B6A]  uppercase font-semibold" />
+                  <span className="absolute inset-0 text-[#E14B6A] uppercase font-semibold" />
                   <span
                     className={`text-[42px] p-1 font-semibold font-sans uppercase`}
                   >
@@ -149,7 +149,7 @@ export function EmissionsSummary({
           </div>
         </div>
 
-        <div className=" overflow-hidden">
+        <div className="overflow-hidden col-span-2">
           <table className="w-full">
             <thead>
               <tr className="border-b uppercase font-semibold text-[#96B0BD] text-[18px] leading-6">

@@ -103,7 +103,7 @@ export default function Index() {
               </a>
             </Link>
           </div>
-          <div className="invisible sm:visible col-span-2">
+          <div className="overflow-hidden col-span-2">
             <CodeBlockDemo
               code="fetch('http://example.com/movies.json') 
                .then(response => response.json()) 
@@ -231,7 +231,7 @@ export default function Index() {
                 <a>
                   <div
                     key={i}
-                    className="aspect-w-2 aspect-h-1  overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
+                    className="aspect-w-2 aspect-h-1 overflow-hidden sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2"
                   >
                     <div className="object-center object-cover ">
                       <Image
@@ -277,7 +277,7 @@ export default function Index() {
         <div className="border-t-[1px] border-[#353f50] mb-12"></div>
         <div className="w-full md:w-1/3">
           <div className="text-3xl font-extrabold font-LibreFranklin mb-12">
-            One Open Source of Truth for Environmental Data
+            Earth’s data. Now.
           </div>
 
           <div className="mb-12">
