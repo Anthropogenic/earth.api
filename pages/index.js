@@ -103,7 +103,7 @@ export default function Index() {
               </a>
             </Link>
           </div>
-          <div className="invisible sm:visible col-span-2">
+          <div className="hidden sm:visible col-span-2">
             <CodeBlockDemo
               code="fetch('http://example.com/movies.json') 
                .then(response => response.json()) 
@@ -277,7 +277,7 @@ export default function Index() {
         <div className="border-t-[1px] border-[#353f50] mb-12"></div>
         <div className="w-full md:w-1/3">
           <div className="text-3xl font-extrabold font-LibreFranklin mb-12">
-            One Open Source of Truth for Environmental Data
+            Earth’s data. Now.
           </div>
 
           <div className="mb-12">

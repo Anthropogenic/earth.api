@@ -52,7 +52,7 @@ export default function Emissionssf6() {
         <EmissionsSummary
           image={sf6HeroImage}
           measurement={data.mean}
-          unit={data.mean}
+          unit={data.unit}
           date={data.date}
           tdate={data.date}
           tmean={data.mean}

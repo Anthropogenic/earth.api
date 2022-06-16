@@ -52,7 +52,7 @@ export default function EmissionsCo2() {
         <EmissionsSummary
           image={n2oHeroImage}
           measurement={data.mean}
-          unit={data.mean}
+          unit={data.unit}
           date={data.date}
           tdate={data.date}
           tmean={data.mean}

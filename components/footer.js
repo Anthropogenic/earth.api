@@ -28,10 +28,16 @@ const FooterLinks = [
   {
     title: "Open Source",
     links: [
-      { name: "Contribute", href: "/", fathomEventCode: "" },
-      { name: "Partner with Us", href: "/", fathomEventCode: "" },
-      { name: "Donations", href: "/", fathomEventCode: "" },
-      { name: "Github", href: "/", fathomEventCode: "" },
+      {
+        name: "Contribute",
+        href: "https://github.com/Anthropogenic/earth.api",
+        fathomEventCode: "",
+      },
+      {
+        name: "Github",
+        href: "https://github.com/Anthropogenic/earth.api",
+        fathomEventCode: "",
+      },
       { name: "Discord Community", href: "/", fathomEventCode: "" },
     ],
   },
@@ -48,7 +54,6 @@ const FooterLinks = [
         href: "https://anthropogenic.com",
         fathomEventCode: "",
       },
-      { name: "Scope6", href: "https://scope6.earth", fathomEventCode: "" },
     ],
   },
 ];
