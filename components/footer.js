@@ -9,17 +9,17 @@ const FooterLinks = [
     title: "Data Sources",
     links: [
       {
-        name: "co2 Data",
+        name: "CO₂ Data",
         href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
         fathomEventCode: "",
       },
       {
-        name: "n20 Data",
+        name: "N₂0 Data",
         href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
         fathomEventCode: "",
       },
       {
-        name: "sf6 Data",
+        name: "SF₆ Data",
         href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
         fathomEventCode: "",
       },
