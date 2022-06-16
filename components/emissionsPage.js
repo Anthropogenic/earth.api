@@ -78,10 +78,10 @@ export function EmissionsYearly({ data, source, apiHref, ftpHref, childHref }) {
                 </td>
                 <td className="flex justify-between px-3 py-4 text-[#3695C4]">
                   <Link href={"/api/" + apiHref + "/" + data.id}>
-                    <a className="">API</a>
+                    <a className="invisible sm:visible">API</a>
                   </Link>
                   <Link href={ftpHref}>
-                    <a className="">FTP</a>
+                    <a className="invisible sm:visible">FTP</a>
                   </Link>
                   <Link href={"/" + childHref + "/" + data.id}>
                     <a className="float-right">Details →</a>
