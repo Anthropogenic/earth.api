@@ -8,7 +8,6 @@ import { SITE_NAME } from "../lib/constants";
 import SiteLogo from "../public/EarthApiLogo.png";
 
 const NavigationLinks = [
-  { title: "try", href: "/try" },
   {
     title: "data",
     href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
