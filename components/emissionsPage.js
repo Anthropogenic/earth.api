@@ -1,11 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Button from "../components/button";
-
-import co2HeroImage from "../public/assets/emissions/co2@2x.png";
-import n20HeroImage from "../public/assets/emissions/n2o@2x.png";
-import sf6HeroImage from "../public/assets/emissions/sf6@2x.png";
-import seaLevelHeroImage from "../public/assets/emissions/seaLevels@2x.png";
 
 export function PageHero({ title, description, image, type, color }) {
   return (
@@ -45,12 +39,15 @@ export function EmissionsTable({ data, source, apiHref, ftpHref, childHref }) {
               >
                 measurement
               </th>
-              <th
-                scope="col"
-                className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
-              >
-                error
-              </th>
+              {data.unc && (
+                <th
+                  scope="col"
+                  className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
+                >
+                  error
+                </th>
+              )}
+
               <th
                 scope="col"
                 className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
@@ -76,7 +73,10 @@ export function EmissionsTable({ data, source, apiHref, ftpHref, childHref }) {
                 <td className="whitespace-nowrap px-3 py-4">
                   {data.measurement}
                 </td>
-                <td className="whitespace-nowrap px-3 py-4">{data.unc}</td>
+                {data.unc && (
+                  <td className="whitespace-nowrap px-3 py-4">{data.unc}</td>
+                )}
+
                 <td className="whitespace-nowrap px-3 py-4">
                   <Link href="http://www.noaa.gov">
                     <a>NOAA</a>
