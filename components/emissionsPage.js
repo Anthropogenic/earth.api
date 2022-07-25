@@ -26,7 +26,7 @@ export function PageHero({ title, description, image, type, color }) {
   );
 }
 
-export function EmissionsYearly({ data, source, apiHref, ftpHref, childHref }) {
+export function EmissionsTable({ data, source, apiHref, ftpHref, childHref }) {
   return (
     <>
       <div className="bg-[#17253D]">
@@ -68,8 +68,14 @@ export function EmissionsYearly({ data, source, apiHref, ftpHref, childHref }) {
           <tbody className="divide-y divide-gray-200">
             {data.map((data) => (
               <tr key={data.id}>
-                <td className="whitespace-nowrap py-4">{data.date}</td>
-                <td className="whitespace-nowrap px-3 py-4">{data.mean}</td>
+                <td className="whitespace-nowrap py-4">
+                  {data.year && <span>{data.year}</span>}
+                  {data.month && <span>.{data.month}</span>}
+                  {data.day && <span>.{data.day}</span>}
+                </td>
+                <td className="whitespace-nowrap px-3 py-4">
+                  {data.measurement}
+                </td>
                 <td className="whitespace-nowrap px-3 py-4">{data.unc}</td>
                 <td className="whitespace-nowrap px-3 py-4">
                   <Link href="http://www.noaa.gov">
