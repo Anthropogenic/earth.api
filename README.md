@@ -6,82 +6,144 @@ If you are using a web3 compatible browser the domain is available at [earth.api
 
 All data is sourced from the [National Oceanic and Atmospheric Administration](https://gml.noaa.gov/ccgg/trends/global.html).
 
-### ch4
+### CH₄
 
-`api/ch4/yearly`
+Methane is a chemical compound with the chemical formula CH₄. It is a group-14 hydride, the simplest alkane, and the main constituent of natural gas. The relative abundance of methane on Earth makes it an economically attractive fuel, although capturing and storing it poses technical challenges due to its gaseous state under normal conditions for temperature and pressure. ~ Wikipedia
 
-Sample Data:
-
-```
-coming soon
-```
+#### Monthly Data
 
 API Path:
 `api/ch4/monthly`
 
-Sample Data:
+Sample Data from 1983-07:
 
 ```
-coming soon
+{
+	"id": "198307",
+	"year": 1983,
+	"month": 7,
+	"measurement": "1626.0",
+	"unc": "2.3",
+	"trend": "1635.6",
+	"trend_unc": "1.5",
+	"unit": "ppb"
+},
 ```
 
-### co2
+### CO₂
+
+Carbon dioxide is a chemical compound occurring as a colorless gas with a density about 53% higher than that of dry air. ~ Wikipedia
+
+#### Yearly Data:
 
 `api/co2/yearly`
 
-Sample Data:
+Sample Data for 1980:
 
 ```
-[{"source":[{"name":"National Oceanic and Atmospheric Administration","site":"https://gml.noaa.gov/ccgg/trends/global.html","ftp":"ftp://aftp.cmdl.noaa.gov/products/trends/co2/","api":"https://hge.earth/api/co2/yearly"}]},{"data":[{"id":"1980","date":"1980","mean":"338.91","unc":"0.1"},{"id":"1981","date":"1981","mean":"340.11","unc":"0.1"},{"id":"1982","date":"1982","mean":"340.86","unc":"0.1"},
-...']
+ {
+	"id": "1980",
+	"year": "1980",
+	"measurement": "338.91",
+	"unc": "0.1",
+	"unit": "ppm"
+},
 ```
+
+#### Monthly Data:
 
 API Path:
 `api/co2/monthly`
 
-Sample Data:
+Sample Data for 1908-01:
 
 ```
-[{"source":[{"name":"National Oceanic and Atmospheric Administration","site":"https://gml.noaa.gov/ccgg/trends/global.html","ftp":"ftp://aftp.cmdl.noaa.gov/products/trends/co2/","api":"https://hge.earth/api/co2/yearly"}]},{"data":[{"year":1980,"month":1,"decimal":1980.042,"average":338.55,"trend":337.93},
-...']
+{
+	"id": "198001",
+	"year": 1980,
+	"month": 1,
+	"measurement": "338.55",
+	"trend": "337.93",
+	"unit": "ppm"
+},
 ```
 
-### n2o
-
-`api/n2o/yearly`
-
-Sample Data:
-
-```
-coming soon
-```
+#### Weekly Data:
 
 API Path:
-`api/n2o/monthly`
+`api/co2/weekly`
 
-Sample Data:
+Sample Data for 1974-05-19:
 
 ```
-coming soon
+{
+	"id": "19740519",
+	"year": 1974,
+	"month": 5,
+	"day": 19,
+	"measurement": "333.37",
+	"unit": "ppm"
+},
 ```
 
-### sf6
+### N₂O
+
+Nitrous oxide, commonly known as laughing gas, nitrous, or nos, is a chemical compound, an oxide of nitrogen with the formula N ₂O. At room temperature, it is a colourless non-flammable gas, and has a slightly sweet scent and taste. At elevated temperatures, nitrous oxide is a powerful oxidiser similar to molecular oxygen. ~ Wikipedia
+
+#### Yearly Data:
+
+API Path:
+`api/n2o/yearly`
+
+Sample Data from 2001:
+
+```
+{
+	"id": "2001",
+	"year": "2001",
+	"measurement": "0.71",
+	"unc": "0.11",
+	"unit": "ppb"
+},
+```
+
+### SF₆
+
+Sulfur hexafluoride or sulphur hexafluoride is an extremely potent and persistent greenhouse gas that is primarily utilized as an electrical insulator and arc suppressant. ~ Wikipedia
+
+#### Yearly Data:
 
 `api/sf6/yearly`
 
-Sample Data:
+Sample Data from 1998:
 
 ```
-coming soon
+ {
+	"id": "1998",
+	"year": "1998",
+	"measurement": "0.20",
+	"unc": "0.004",
+	"unit": "ppt"
+},
 ```
 
-API Path:
+#### Monthly Data:
+
 `api/sf6/monthly`
 
-Sample Data:
+Sample Data from 1997-07:
 
 ```
-coming soon
+{
+	"id": "199707",
+	"year": 1997,
+	"month": 7,
+	"measurement": "4.00",
+	"unc": "0.005",
+	"trend": "4.01",
+	"trend_unc": "0.004",
+	"unit": "ppt"
+},
 ```
 
 ## Resources
