@@ -55,7 +55,7 @@ Sample Data for 1980:
 API Path:
 `api/co2/monthly`
 
-Sample Data for 1908-01:
+Sample Data for 1980-01:
 
 ```
 {
