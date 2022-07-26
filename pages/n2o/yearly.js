@@ -1,21 +1,18 @@
-import Link from "next/link";
-import Image from "next/image";
+import { useRouter } from "next/router";
 import useSWR from "swr";
 import Layout from "../../components/layout";
 import RequestAccess from "../../components/request";
-import { PageHero, EmissionsYearly } from "../../components/emissionsPage";
+import { PageHero, EmissionsTable } from "../../components/emissionsPage";
 import DataTableTabs from "../../components/tables";
 
-import n2oHeroImage from "../../public/assets/emissions/n2o@2x.png";
+import n2oHeroImage from "../../public/assets/emissions/n2oBanner.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Index() {
-  const { data, error } = useSWR("/api/n2o", fetcher);
+  const { data, error } = useSWR("/api/sf6/yearly", fetcher);
+  const { asPath } = useRouter();
+  const DataRouteURL = asPath.substring(1);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
@@ -31,20 +28,26 @@ export default function Index() {
           color="DF775E"
         />
       </div>
-      <div className="flex">
-        <DataTableTabs YearHref="/" MonthHref="/" WeekHref="/" DayHref="/" />
-      </div>
-
       <div className="flex bg-[#17253D] p-9">
         <div className="w-full">
           <div className="mt-8 flex flex-col">
             <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                <DataTableTabs
+                  YearHref="/n2o/yearly"
+                  MonthHref="/n2o/monthly"
+                  WeekHref=""
+                  DayHref=""
+                />
+
                 <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                  <EmissionsYearly
+                  <EmissionsTable
                     key={data}
                     data={data}
                     source={data.source}
+                    apiHref={DataRouteURL}
+                    ftpHref={DataRouteURL}
+                    childHref={DataRouteURL}
                   />
                 </div>
               </div>
@@ -52,7 +55,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="bg-[#17253D]">
+      <div className="flex">
         <RequestAccess />
       </div>
     </Layout>

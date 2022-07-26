@@ -1,16 +1,7 @@
-import { co2Yearly } from "../../../data/co2";
+import { co2Yearly, co2Monthly, co2Weekly } from "../../../data/co2";
 
 export default function carbonHandler({ query: { id } }, res) {
-  // const filtered = co2Yearly.filter((c) => c.id === id);
-  // const yearlySource = data[0].source[0];
-  // const yearlyData = data[1].data[0];
-  const filtered = co2Yearly.filter((c) => c.id === id);
-
-  // const filtered = co2Yearly.filter(function (element) {
-  //     return element.subElements.some( function (subElement) {
-  //         return subElement.surname === surname
-  //     });
-  // });
+  let filtered = co2Yearly.concat(co2Monthly, co2Weekly);
 
   if (filtered.length > 0) {
     res.status(200).json(filtered[0]);

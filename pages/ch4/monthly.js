@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import Layout from "../../components/layout";
@@ -10,7 +12,7 @@ import Co2HeroImage from "../../public/assets/emissions/co2Banner.png";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/co2/monthly", fetcher);
+  const { data, error } = useSWR("/api/ch4/monthly", fetcher);
   const { asPath } = useRouter();
   const DataRouteURL = asPath.substring(1);
 
@@ -21,8 +23,8 @@ export default function Index() {
     <Layout>
       <div className="bg-[#17253D] p-9">
         <PageHero
-          title="CO₂"
-          description="Carbon dioxide is a chemical compound occurring as a colorless gas with a density about 53% higher than that of dry air. ~ Wikipedia"
+          title="CH₄"
+          description="Methane is a chemical compound with the chemical formula CH₄. It is a group-14 hydride, the simplest alkane, and the main constituent of natural gas. The relative abundance of methane on Earth makes it an economically attractive fuel, although capturing and storing it poses technical challenges due to its gaseous state under normal conditions for temperature and pressure. ~ Wikipedia"
           type="Emissions Data"
           image={Co2HeroImage}
           color="bg-[#DF775E]"
@@ -34,9 +36,9 @@ export default function Index() {
             <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                 <DataTableTabs
-                  YearHref="/co2/yearly"
-                  MonthHref="/co2/monthly"
-                  WeekHref="/co2/weekly"
+                  YearHref="/ch4/yearly"
+                  MonthHref="/ch4/monthly"
+                  WeekHref=""
                   DayHref=""
                 />
 

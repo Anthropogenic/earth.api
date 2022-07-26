@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import useSWR from "swr";
 import { useState } from "react";
 
 import Layout from "../components/layout";
@@ -39,6 +38,13 @@ const ApiData = [
     name: "SF₆",
     description: "Sulfur Hexafluoride",
     href: "/sf6",
+    heroImage: "/assets/emissions/sf6@2x.png",
+    ClassName: "text-[#77977F]",
+  },
+  {
+    name: "CH₄",
+    description: "Methane",
+    href: "/ch4",
     heroImage: "/assets/emissions/sf6@2x.png",
     ClassName: "text-[#77977F]",
   },

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import useSWR from "swr";
 import Layout from "../../components/layout";
 import RequestAccess from "../../components/request";
-import { PageHero, EmissionsYearly } from "../../components/emissionsPage";
+import { PageHero, EmissionsTable } from "../../components/emissionsPage";
 import DataTableTabs from "../../components/tables";
 
 import sf6HeroImage from "../../public/assets/emissions/sf6Banner.png";
@@ -35,8 +35,14 @@ export default function Index() {
           <div className="mt-8 flex flex-col">
             <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                <DataTableTabs
+                  YearHref=""
+                  MonthHref="/sf6/monthly"
+                  WeekHref=""
+                  DayHref=""
+                />
                 <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                  <EmissionsYearly
+                  <EmissionsTable
                     key={data}
                     data={data}
                     source={data.source}

@@ -10,7 +10,7 @@ import Co2HeroImage from "../../public/assets/emissions/co2Banner.png";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/co2/monthly", fetcher);
+  const { data, error } = useSWR("/api/co2/weekly", fetcher);
   const { asPath } = useRouter();
   const DataRouteURL = asPath.substring(1);
 
