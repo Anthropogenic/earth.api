@@ -39,14 +39,13 @@ export function EmissionsTable({ data, source, apiHref, ftpHref, childHref }) {
               >
                 measurement
               </th>
-              {data.unc && (
-                <th
-                  scope="col"
-                  className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
-                >
-                  error
-                </th>
-              )}
+
+              <th
+                scope="col"
+                className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
+              >
+                unc
+              </th>
 
               <th
                 scope="col"
@@ -110,6 +109,7 @@ export function EmissionsSummary({
   tdate,
   tmean,
   tunc,
+  ttrendunc,
   terror,
   tsource,
   apiHref,
@@ -160,8 +160,10 @@ export function EmissionsSummary({
             <thead>
               <tr className="border-b uppercase font-semibold text-[#96B0BD] text-[18px] leading-6">
                 <th className="text-left ">Date</th>
-                <th className="text-left ">Mean</th>
+                <th className="text-left ">Trend</th>
                 <th className="text-left ">UNC</th>
+                <th className="text-left ">Trend UNC</th>
+
                 <th className="text-left ">Source</th>
               </tr>
             </thead>
@@ -170,6 +172,7 @@ export function EmissionsSummary({
                 <td className="text-left">{tdate}</td>
                 <td className="text-left">{tmean}</td>
                 <td className="text-left">{tunc}</td>
+                <td className="text-left">{ttrendunc}</td>
                 <td className="text-left">
                   <Link
                     href="https://www.noaa.gov/"

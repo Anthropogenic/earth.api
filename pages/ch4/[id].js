@@ -55,8 +55,9 @@ export default function EmissionsCh4() {
           unit={data.unit}
           date={data.year + "-" + data.month}
           tdate={data.year + "-" + data.month}
-          tmean={data.mean}
+          tmean={data.trend}
           tunc={data.unc}
+          ttrendunc={data.trend_unc}
           terror="tbd"
           tsource="NOAA"
           apiHref={APIPath}
