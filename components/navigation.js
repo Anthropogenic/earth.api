@@ -13,6 +13,7 @@ const NavigationLinks = [
     href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
   },
   { title: "contribute", href: "https://github.com/Anthropogenic/earth.api" },
+  { title: "status", href: "https://status.hge.earth" },
 ];
 
 function classNames(...classes) {
