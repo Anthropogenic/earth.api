@@ -7,7 +7,7 @@ import RequestAccess from "../../components/request";
 import { PageHero, EmissionsTable } from "../../components/emissionsPage";
 import DataTableTabs from "../../components/tables";
 
-import Co2HeroImage from "../../public/assets/emissions/co2Banner.png";
+import Co2HeroImage from "../../public/assets/emissions/ch4Banner.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
