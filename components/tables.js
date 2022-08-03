@@ -8,8 +8,8 @@ export default function DataTableTabs({
   DayHref,
 }) {
   const { asPath } = useRouter();
-  const DataRouteURL = asPath.substring(1);
-
+  var afterWithout = asPath.substr(1, asPath.lastIndexOf("/"));
+  const DataRouteURL = afterWithout;
   return (
     <>
       <div className="flex text-white">
