@@ -1,11 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Button from "../components/button";
-
-import co2HeroImage from "../public/assets/emissions/co2@2x.png";
-import n20HeroImage from "../public/assets/emissions/n2o@2x.png";
-import sf6HeroImage from "../public/assets/emissions/sf6@2x.png";
-import seaLevelHeroImage from "../public/assets/emissions/seaLevels@2x.png";
 
 export function PageHero({ title, description, image, type, color }) {
   return (
@@ -26,11 +20,11 @@ export function PageHero({ title, description, image, type, color }) {
   );
 }
 
-export function EmissionsYearly({ data, source, apiHref, ftpHref, childHref }) {
+export function EmissionsTable({ data, source, apiHref, ftpHref, childHref }) {
   return (
     <>
       <div className="bg-[#17253D]">
-        <table className="min-w-full divide-y divide-gray-300">
+        <table className="w-full divide-y divide-gray-300">
           <thead className="text-[#96B0BD]">
             <tr>
               <th
@@ -39,18 +33,21 @@ export function EmissionsYearly({ data, source, apiHref, ftpHref, childHref }) {
               >
                 date
               </th>
+
               <th
                 scope="col"
                 className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
               >
                 measurement
               </th>
+
               <th
                 scope="col"
                 className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
               >
-                error
+                unc
               </th>
+
               <th
                 scope="col"
                 className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
@@ -68,9 +65,18 @@ export function EmissionsYearly({ data, source, apiHref, ftpHref, childHref }) {
           <tbody className="divide-y divide-gray-200">
             {data.map((data) => (
               <tr key={data.id}>
-                <td className="whitespace-nowrap py-4">{data.date}</td>
-                <td className="whitespace-nowrap px-3 py-4">{data.mean}</td>
-                <td className="whitespace-nowrap px-3 py-4">{data.unc}</td>
+                <td className="whitespace-nowrap py-4">
+                  {data.year && <span>{data.year}</span>}
+                  {data.month && <span>.{data.month}</span>}
+                  {data.day && <span>.{data.day}</span>}
+                </td>
+                <td className="whitespace-nowrap px-3 py-4">
+                  {data.measurement}
+                </td>
+                {data.unc && (
+                  <td className="whitespace-nowrap px-3 py-4">{data.unc}</td>
+                )}
+
                 <td className="whitespace-nowrap px-3 py-4">
                   <Link href="http://www.noaa.gov">
                     <a>NOAA</a>
@@ -104,6 +110,7 @@ export function EmissionsSummary({
   tdate,
   tmean,
   tunc,
+  ttrendunc,
   terror,
   tsource,
   apiHref,
@@ -153,17 +160,20 @@ export function EmissionsSummary({
           <table className="w-full">
             <thead>
               <tr className="border-b uppercase font-semibold text-[#96B0BD] text-[18px] leading-6">
-                <th className="text-left ">Date</th>
-                <th className="text-left ">Mean</th>
-                <th className="text-left ">UNC</th>
+                {tdate && <th className="text-left ">Date</th>}
+                {tmean && <th className="text-left ">Trend</th>}
+                {tunc && <th className="text-left ">UNC</th>}
+                {ttrendunc && <th className="text-left ">Trend UNC</th>}
+
                 <th className="text-left ">Source</th>
               </tr>
             </thead>
             <tbody className="border-b">
               <tr className="">
-                <td className="text-left">{tdate}</td>
-                <td className="text-left">{tmean}</td>
-                <td className="text-left">{tunc}</td>
+                {tdate && <td className="text-left">{tdate}</td>}
+                {tmean && <td className="text-left">{tmean}</td>}
+                {tunc && <td className="text-left">{tunc}</td>}
+                {ttrendunc && <td className="text-left">{ttrendunc}</td>}
                 <td className="text-left">
                   <Link
                     href="https://www.noaa.gov/"

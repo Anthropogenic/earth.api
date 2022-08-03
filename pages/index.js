@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import useSWR from "swr";
 import { useState } from "react";
 
 import Layout from "../components/layout";
@@ -11,10 +10,6 @@ import HeroMap from "../public/hero-dot-globe@2x.png";
 import StudentsHeroImage from "../public/assets/students@2x.png";
 import ResearchersHeroImage from "../public/assets/researchers@2x.png";
 import CreatorsHeroImage from "../public/assets/creators@2x.png";
-import co2HeroImage from "../public/assets/emissions/co2@2x.png";
-import n20HeroImage from "../public/assets/emissions/n2o@2x.png";
-import sf6HeroImage from "../public/assets/emissions/sf6@2x.png";
-import seaLevelHeroImage from "../public/assets/emissions/seaLevels@2x.png";
 
 import SearchIcon from "../public/icons/search-icon.png";
 
@@ -40,6 +35,13 @@ const ApiData = [
     description: "Sulfur Hexafluoride",
     href: "/sf6",
     heroImage: "/assets/emissions/sf6@2x.png",
+    ClassName: "text-[#77977F]",
+  },
+  {
+    name: "CH₄",
+    description: "Methane",
+    href: "/ch4",
+    heroImage: "/assets/emissions/ch4@2x.png",
     ClassName: "text-[#77977F]",
   },
 ];
