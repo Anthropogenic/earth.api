@@ -7,7 +7,7 @@ import RequestAccess from "../../components/request";
 import { PageHero, EmissionsTable } from "../../components/emissionsPage";
 import DataTableTabs from "../../components/tables";
 
-import Co2HeroImage from "../../public/assets/emissions/co2Banner.png";
+import Co2HeroImage from "../../public/assets/emissions/ch4Banner.png";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -17,7 +17,7 @@ export default function Index() {
   const DataRouteURL = asPath.substring(1);
 
   if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <Layout>LOADING</Layout>;
 
   return (
     <Layout>
@@ -35,13 +35,6 @@ export default function Index() {
           <div className="mt-8 flex flex-col">
             <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                <DataTableTabs
-                  YearHref=""
-                  MonthHref="/ch4/monthly"
-                  WeekHref=""
-                  DayHref=""
-                />
-
                 <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
                   <EmissionsTable
                     key={data}

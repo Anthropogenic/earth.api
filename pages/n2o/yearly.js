@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import Layout from "../../components/layout";
@@ -10,19 +11,19 @@ import n2oHeroImage from "../../public/assets/emissions/n2oBanner.png";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/sf6/yearly", fetcher);
+  const { data, error } = useSWR("/api/n2o/yearly", fetcher);
   const { asPath } = useRouter();
-  const DataRouteURL = asPath.substring(1);
-
+  var afterWithout = asPath.substr(1, asPath.lastIndexOf("/"));
+  const DataRouteURL = afterWithout;
   if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <Layout>LOADING</Layout>;
 
   return (
     <Layout>
       <div className="bg-[#17253D] p-9">
         <PageHero
-          title="n2o"
-          description="Small description about the data we are collecting for n2o etc.. this should probably be just one or two lines long."
+          title="N₂O"
+          description="Nitrous oxide, commonly known as laughing gas, nitrous, or nos, is a chemical compound, an oxide of nitrogen with the formula N ₂O. At room temperature, it is a colourless non-flammable gas, and has a slightly sweet scent and taste. At elevated temperatures, nitrous oxide is a powerful oxidiser similar to molecular oxygen ~ Wikipedia"
           type="Emissions Data"
           image={n2oHeroImage}
           color="DF775E"
@@ -41,14 +42,21 @@ export default function Index() {
                 />
 
                 <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                  <EmissionsTable
+                  <span>
+                    Data set being update please check{" "}
+                    <Link href="https://github.com/Anthropogenic/earth.api/issues/18">
+                      <a>ticket</a>
+                    </Link>{" "}
+                    for progress
+                  </span>
+                  {/* <EmissionsTable
                     key={data}
                     data={data}
                     source={data.source}
                     apiHref={DataRouteURL}
                     ftpHref={DataRouteURL}
                     childHref={DataRouteURL}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>

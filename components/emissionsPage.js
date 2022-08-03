@@ -24,7 +24,7 @@ export function EmissionsTable({ data, source, apiHref, ftpHref, childHref }) {
   return (
     <>
       <div className="bg-[#17253D]">
-        <table className="min-w-full divide-y divide-gray-300">
+        <table className="w-full divide-y divide-gray-300">
           <thead className="text-[#96B0BD]">
             <tr>
               <th
@@ -33,20 +33,20 @@ export function EmissionsTable({ data, source, apiHref, ftpHref, childHref }) {
               >
                 date
               </th>
+
               <th
                 scope="col"
                 className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
               >
                 measurement
               </th>
-              {data.unc && (
-                <th
-                  scope="col"
-                  className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
-                >
-                  error
-                </th>
-              )}
+
+              <th
+                scope="col"
+                className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
+              >
+                unc
+              </th>
 
               <th
                 scope="col"
@@ -110,6 +110,7 @@ export function EmissionsSummary({
   tdate,
   tmean,
   tunc,
+  ttrendunc,
   terror,
   tsource,
   apiHref,
@@ -159,17 +160,20 @@ export function EmissionsSummary({
           <table className="w-full">
             <thead>
               <tr className="border-b uppercase font-semibold text-[#96B0BD] text-[18px] leading-6">
-                <th className="text-left ">Date</th>
-                <th className="text-left ">Mean</th>
-                <th className="text-left ">UNC</th>
+                {tdate && <th className="text-left ">Date</th>}
+                {tmean && <th className="text-left ">Trend</th>}
+                {tunc && <th className="text-left ">UNC</th>}
+                {ttrendunc && <th className="text-left ">Trend UNC</th>}
+
                 <th className="text-left ">Source</th>
               </tr>
             </thead>
             <tbody className="border-b">
               <tr className="">
-                <td className="text-left">{tdate}</td>
-                <td className="text-left">{tmean}</td>
-                <td className="text-left">{tunc}</td>
+                {tdate && <td className="text-left">{tdate}</td>}
+                {tmean && <td className="text-left">{tmean}</td>}
+                {tunc && <td className="text-left">{tunc}</td>}
+                {ttrendunc && <td className="text-left">{ttrendunc}</td>}
                 <td className="text-left">
                   <Link
                     href="https://www.noaa.gov/"

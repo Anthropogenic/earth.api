@@ -23,6 +23,11 @@ const FooterLinks = [
         href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
         fathomEventCode: "",
       },
+      {
+        name: "CH₄ Data",
+        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
+        fathomEventCode: "",
+      },
     ],
   },
   {
@@ -44,19 +49,23 @@ const FooterLinks = [
     title: "Company",
     links: [
       {
-        name: "Why earth.api",
-        href: "https://medium.com/anthropogenic/origin-stories-a-climate-company-born-from-fire-758b699e5ae1",
+        name: "Blog",
+        href: "https://blog.anthropogenic.com",
         fathomEventCode: "",
       },
       {
-        name: "Anthropogenic",
-        href: "https://anthropogenic.com",
+        name: "Analytics",
+        href: "https://app.usefathom.com/share/cysaygvg/earth+api",
+        fathomEventCode: "",
+      },
+      {
+        name: "Status",
+        href: "https://status.hge.earth",
         fathomEventCode: "",
       },
     ],
   },
 ];
-
 export default function Footer({ preview, children }) {
   return (
     <>
