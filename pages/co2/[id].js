@@ -51,12 +51,13 @@ export default function EmissionsCo2() {
 
         <EmissionsSummary
           image={co2HeroImage}
-          measurement={data.mean}
+          measurement={data.measurement}
           unit={data.unit}
-          date={data.date}
-          tdate={data.date}
-          tmean={data.mean}
+          date={data.year + "-" + data.month}
+          tdate={data.year + "-" + data.month}
+          tmean={data.trend}
           tunc={data.unc}
+          ttrendunc={data.trend_unc}
           terror="tbd"
           tsource="NOAA"
           apiHref={APIPath}

@@ -22,7 +22,7 @@ export default function Index() {
       <div className="bg-[#17253D] p-9">
         <PageHero
           title="n2o"
-          description="Small description about the data we are collecting for n2o etc.. this should probably be just one or two lines long."
+          description="Nitrous oxide, commonly known as laughing gas, nitrous, or nos, is a chemical compound, an oxide of nitrogen with the formula N ₂O. At room temperature, it is a colourless non-flammable gas, and has a slightly sweet scent and taste. At elevated temperatures, nitrous oxide is a powerful oxidiser similar to molecular oxygen ~ Wikipedia"
           type="Emissions Data"
           image={n2oHeroImage}
           color="DF775E"
