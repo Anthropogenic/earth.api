@@ -10,7 +10,7 @@ import n2oHeroImage from "../../public/assets/emissions/n2oBanner.png";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Index() {
-  const { data, error } = useSWR("/api/sf6/monthly", fetcher);
+  const { data, error } = useSWR("/api/n2o/monthly", fetcher);
   const { asPath } = useRouter();
   var afterWithout = asPath.substr(1, asPath.lastIndexOf("/"));
   const DataRouteURL = afterWithout;
@@ -21,8 +21,9 @@ export default function Index() {
     <Layout>
       <div className="bg-[#17253D] p-9">
         <PageHero
-          title="n2o"
+          title="N₂O"
           description="Nitrous oxide, commonly known as laughing gas, nitrous, or nos, is a chemical compound, an oxide of nitrogen with the formula N ₂O. At room temperature, it is a colourless non-flammable gas, and has a slightly sweet scent and taste. At elevated temperatures, nitrous oxide is a powerful oxidiser similar to molecular oxygen ~ Wikipedia"
+          type="Emissions Data"
           image={n2oHeroImage}
           color="DF775E"
         />

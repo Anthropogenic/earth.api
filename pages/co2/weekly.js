@@ -13,7 +13,6 @@ export default function Index() {
   const { data, error } = useSWR("/api/co2/weekly", fetcher);
   const { asPath } = useRouter();
   var afterWithout = asPath.substr(1, asPath.lastIndexOf("/"));
-  var afterWithout = asPath.substr(1, asPath.lastIndexOf("/"));
   const DataRouteURL = afterWithout;
 
   if (error) return <div>Failed to load</div>;

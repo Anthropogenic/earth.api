@@ -24,7 +24,7 @@ export function EmissionsTable({ data, source, apiHref, ftpHref, childHref }) {
   return (
     <>
       <div className="bg-[#17253D]">
-        <table className="min-w-full divide-y divide-gray-300">
+        <table className="w-full divide-y divide-gray-300">
           <thead className="text-[#96B0BD]">
             <tr>
               <th
@@ -40,12 +40,14 @@ export function EmissionsTable({ data, source, apiHref, ftpHref, childHref }) {
                 measurement
               </th>
 
-              <th
-                scope="col"
-                className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
-              >
-                unc
-              </th>
+              {data.unc && (
+                <th
+                  scope="col"
+                  className="px-3 py-3 text-left text-sm font-semibold text-[#96B0BD] uppercase"
+                >
+                  unc
+                </th>
+              )}
 
               <th
                 scope="col"
