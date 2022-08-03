@@ -15,7 +15,6 @@ export default function Index() {
   var afterWithout = asPath.substr(1, asPath.lastIndexOf("/"));
   var afterWithout = asPath.substr(1, asPath.lastIndexOf("/"));
   const DataRouteURL = afterWithout;
-  console.log("new path: " + DataRouteURL);
 
   if (error) return <div>Failed to load</div>;
   if (!data) return <Layout>LOADING</Layout>;
