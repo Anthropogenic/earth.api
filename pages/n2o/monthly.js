@@ -12,10 +12,10 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 export default function Index() {
   const { data, error } = useSWR("/api/sf6/monthly", fetcher);
   const { asPath } = useRouter();
-  const DataRouteURL = asPath.substring(1);
-
+  var afterWithout = asPath.substr(1, asPath.lastIndexOf("/"));
+  const DataRouteURL = afterWithout;
   if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <Layout>LOADING</Layout>;
 
   return (
     <Layout>
