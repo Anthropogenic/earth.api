@@ -15,7 +15,7 @@ export default function Index() {
   const DataRouteURL = asPath.substring(1);
 
   if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <Layout>LOADING</Layout>;
 
   return (
     <Layout>
