@@ -6,7 +6,7 @@ export default function carbonHandler({ query: { id } }, res) {
   if (filtered.length > 0) {
     res.status(200).json(filtered[0]);
   } else {
-    res.status(404).json({ message: `Yearly co2 data for: ${id} not found.` });
+    res.status(404).json({ message: `Yearly CO₂ data for: ${id} not found.` });
 
     // res.status(404).json({ message: id });
   }

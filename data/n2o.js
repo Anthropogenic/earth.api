@@ -7,166 +7,27 @@ export const n2oSource = [
   },
 ];
 export const n2oYearly = [
-  {
-    id: "2001",
-
-    year: "2001",
-    measurement: "0.71",
-    unc: "0.11",
-    unit: "ppb",
-  },
-  {
-    id: "2002",
-
-    year: "2002",
-    measurement: "0.50",
-    unc: "0.14",
-    unit: "ppb",
-  },
-  {
-    id: "2003",
-
-    year: "2003",
-    measurement: "0.81",
-    unc: "0.13",
-    unit: "ppb",
-  },
-  {
-    id: "2004",
-
-    year: "2004",
-    measurement: "0.53",
-    unc: "0.15",
-    unit: "ppb",
-  },
-  {
-    id: "2005",
-
-    year: "2005",
-    measurement: "0.87",
-    unc: "0.13",
-    unit: "ppb",
-  },
-  {
-    id: "2006",
-
-    year: "2006",
-    measurement: "0.69",
-    unc: "0.16",
-    unit: "ppb",
-  },
-  {
-    id: "2007",
-
-    year: "2007",
-    measurement: "0.90",
-    unc: "0.13",
-    unit: "ppb",
-  },
-  {
-    id: "2008",
-
-    year: "2008",
-    measurement: "0.92",
-    unc: "0.14",
-    unit: "ppb",
-  },
-  {
-    id: "2009",
-
-    year: "2009",
-    measurement: "0.76",
-    unc: "0.16",
-    unit: "ppb",
-  },
-  {
-    id: "2010",
-
-    year: "2010",
-    measurement: "1.08",
-    unc: "0.15",
-    unit: "ppb",
-  },
-  {
-    id: "2011",
-
-    year: "2011",
-    measurement: "0.90",
-    unc: "0.14",
-    unit: "ppb",
-  },
-  {
-    id: "2012",
-
-    year: "2012",
-    measurement: "0.81",
-    unc: "0.14",
-    unit: "ppb",
-  },
-  {
-    id: "2013",
-
-    year: "2013",
-    measurement: "1.01",
-    unc: "0.14",
-    unit: "ppb",
-  },
-  {
-    id: "2014",
-
-    year: "2014",
-    measurement: "1.24",
-    unc: "0.15",
-    unit: "ppb",
-  },
-  {
-    id: "2015",
-
-    year: "2015",
-    measurement: "0.90",
-    unc: "0.14",
-    unit: "ppb",
-  },
-  {
-    id: "2016",
-
-    year: "2016",
-    measurement: "0.66",
-    unc: "0.14",
-    unit: "ppb",
-  },
-  {
-    id: "2017",
-
-    year: "2017",
-    measurement: "1.02",
-    unc: "0.15",
-    unit: "ppb",
-  },
-  {
-    id: "2018",
-
-    year: "2018",
-    measurement: "1.16",
-    unc: "0.16",
-    unit: "ppb",
-  },
-  {
-    id: "2019",
-
-    year: "2019",
-    measurement: "0.91",
-    unc: "0.15",
-    unit: "ppb",
-  },
-  {
-    id: "2020",
-
-    year: "2020",
-    measurement: "1.36",
-    unc: "0.13",
-    unit: "ppb",
-  },
+  { id: "2001", year: "2001", measurement: "316.36", unc: "0.14", unit: "ppb" },
+  { id: "2002", year: "2002", measurement: "316.94", unc: "0.13", unit: "ppb" },
+  { id: "2003", year: "2003", measurement: "317.62", unc: "0.13", unit: "ppb" },
+  { id: "2004", year: "2004", measurement: "318.26", unc: "0.12", unit: "ppb" },
+  { id: "2005", year: "2005", measurement: "318.91", unc: "0.13", unit: "ppb" },
+  { id: "2006", year: "2006", measurement: "319.82", unc: "0.11", unit: "ppb" },
+  { id: "2007", year: "2007", measurement: "320.44", unc: "0.14", unit: "ppb" },
+  { id: "2008", year: "2008", measurement: "321.50", unc: "0.14", unit: "ppb" },
+  { id: "2009", year: "2009", measurement: "322.27", unc: "0.12", unit: "ppb" },
+  { id: "2010", year: "2010", measurement: "323.19", unc: "0.12", unit: "ppb" },
+  { id: "2011", year: "2011", measurement: "324.21", unc: "0.12", unit: "ppb" },
+  { id: "2012", year: "2012", measurement: "325.05", unc: "0.10", unit: "ppb" },
+  { id: "2013", year: "2013", measurement: "325.94", unc: "0.11", unit: "ppb" },
+  { id: "2014", year: "2014", measurement: "327.09", unc: "0.12", unit: "ppb" },
+  { id: "2015", year: "2015", measurement: "328.17", unc: "0.11", unit: "ppb" },
+  { id: "2016", year: "2016", measurement: "328.95", unc: "0.12", unit: "ppb" },
+  { id: "2017", year: "2017", measurement: "329.74", unc: "0.14", unit: "ppb" },
+  { id: "2018", year: "2018", measurement: "330.90", unc: "0.15", unit: "ppb" },
+  { id: "2019", year: "2019", measurement: "331.88", unc: "0.13", unit: "ppb" },
+  { id: "2020", year: "2020", measurement: "333.03", unc: "0.14", unit: "ppb" },
+  { id: "2021", year: "2021", measurement: "334.31", unc: "0.14", unit: "ppb" },
 ];
 
 export const n2oMonthly = [

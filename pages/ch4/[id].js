@@ -6,7 +6,7 @@ import Layout from "../../components/layout";
 import { Button, BreakCrumbButton } from "../../components/button";
 import { EmissionsSummary } from "../../components/emissionsPage";
 
-import co2HeroImage from "../../public/assets/emissions/co2@2x.png";
+import ch4HeroImage from "../../public/assets/emissions/ch4@2x.png";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -50,7 +50,7 @@ export default function EmissionsCh4() {
         {/* FIX: @gndclouds Make this a component */}
 
         <EmissionsSummary
-          image={co2HeroImage}
+          image={ch4HeroImage}
           measurement={data.measurement}
           unit={data.unit}
           date={data.year + "-" + data.month}
