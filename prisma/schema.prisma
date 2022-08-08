@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,4 +5,87 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model CO2Yearly {
+  id          String @id
+  year        String
+  measurement String
+  unc         String
+  unit        String
+}
+
+model CO2Monthly {
+  id          String @id
+  year        String
+  month       String
+  measurement String
+  unit        String
+  trend       String
+}
+
+model CO2Weekly {
+  id          String @id
+  year        String
+  month       String
+  day         String
+  measurement String
+  unit        String
+}
+
+model CH4Yearly {
+  id          String @id
+  year        String
+  measurement String
+  unc         String
+  unit        String
+}
+
+model CH4Monthly {
+  id          String @id
+  year        String
+  month       String
+  measurement String
+  unc         String
+  trend       String
+  trend_unc   String
+  unit        String
+}
+
+model N2OYearly {
+  id          String @id
+  year        String
+  measurement String
+  unc         String
+  unit        String
+}
+
+model N2OMonthly {
+  id          String @id
+  year        String
+  month       String
+  measurement String
+  unc         String
+  trend       String
+  trend_unc   String
+  unit        String
+}
+
+model SF6Yearly {
+  id          String @id
+  year        String
+  measurement String
+  unc         String
+  unit        String
+}
+
+model SF6Monthly {
+  id          String @id
+  year        String
+  month       String
+  measurement String
+  unc         String
+  trend       String
+  trend_unc   String
+  unit        String
 }
