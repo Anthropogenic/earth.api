@@ -6,51 +6,11 @@ import CCLogo from "../public/ccLogo.png";
 
 const FooterLinks = [
   {
-    title: "Data Sources",
-    links: [
-      {
-        name: "CO₂ Data",
-        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
-        fathomEventCode: "",
-      },
-      {
-        name: "N₂0 Data",
-        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
-        fathomEventCode: "",
-      },
-      {
-        name: "SF₆ Data",
-        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
-        fathomEventCode: "",
-      },
-      {
-        name: "CH₄ Data",
-        href: "https://github.com/Anthropogenic/earth.api/tree/main/data",
-        fathomEventCode: "",
-      },
-    ],
-  },
-  {
-    title: "Open Source",
-    links: [
-      {
-        name: "Contribute",
-        href: "https://github.com/Anthropogenic/earth.api",
-        fathomEventCode: "",
-      },
-      {
-        name: "Github",
-        href: "https://github.com/Anthropogenic/earth.api",
-        fathomEventCode: "",
-      },
-    ],
-  },
-  {
     title: "Company",
     links: [
       {
         name: "Blog",
-        href: "https://blog.anthropogenic.com",
+        href: "https://blog.hge.earth",
         fathomEventCode: "",
       },
       {
@@ -61,6 +21,41 @@ const FooterLinks = [
       {
         name: "Status",
         href: "https://status.hge.earth",
+        fathomEventCode: "",
+      },
+      {
+        name: "Anthropogenic",
+        href: "https://status.hge.earth",
+        fathomEventCode: "",
+      },
+    ],
+  },
+  {
+    title: "Community",
+    links: [
+      {
+        name: "Contribute",
+        href: "https://github.com/Anthropogenic/earth.api",
+        fathomEventCode: "",
+      },
+      {
+        name: "Discord",
+        href: "https://discord.gg/a7HjzV9FS4",
+        fathomEventCode: "",
+      },
+      {
+        name: "Github",
+        href: "https://github.com/Anthropogenic/earth.api",
+        fathomEventCode: "",
+      },
+      {
+        name: "Sponsor",
+        href: "https://github.com/sponsors/Anthropogenic",
+        fathomEventCode: "",
+      },
+      {
+        name: "Gitcoin Grant",
+        href: "https://gitcoin.co/grants/7807/earth-api",
         fathomEventCode: "",
       },
     ],
